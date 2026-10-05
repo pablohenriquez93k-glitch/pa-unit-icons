@@ -27,7 +27,7 @@ var IconosOpc = (function () {
     var DOMINIOS = ['tierra', 'naval', 'aire', 'orbital', 'estructura'];
     var CATS = ['unidades', 'edificios', 'orbital'];
     var COLORES = ['rojo', 'amarillo', 'verde', 'cian', 'azul', 'magenta', 'blanco'];
-    function skinOk(v) { return /^[0-9a-z_]+$/.test(v) ? v : 'original'; }
+    function skinOk(v) { return v === '2_hueca' || v === '4_bisel' ? v : 'original'; }
     function numOpc(clave, min, max) {   // 'global' (o invalido) -> null
         var v = txt(clave, 'global');
         if (v === 'global') { return null; }
@@ -37,7 +37,7 @@ var IconosOpc = (function () {
     return {
         G: G, estrategico: function () { return pct('estrategico'); }, ui: function () { return pct('ui'); },
         skin: function () { return skinOk(txt('skin', 'original')); },
-        tam: function () { var v = Number(txt('tamano', '100')); return isFinite(v) ? Math.max(50, Math.min(200, v)) : 100; },
+        tam: function () { var v = Number(txt('tamano', '100')); return isFinite(v) ? Math.max(50, Math.min(350, v)) : 100; },
         DOMINIOS: DOMINIOS, CATS: CATS, COLORES: COLORES,
         anillos: function () {
             var s = txt('anillo_seleccion', 'original'), h = txt('anillo_hover', 'original');
@@ -47,7 +47,7 @@ var IconosOpc = (function () {
         cfg: function () {
             var sd = {}, zc = {}, ec = {};
             DOMINIOS.forEach(function (d) { var v = txt('sk_' + d, 'global'); sd[d] = v === 'global' ? null : skinOk(v); });
-            CATS.forEach(function (c) { zc[c] = numOpc('z_' + c, 50, 200); ec[c] = numOpc('e_' + c, 0, 100); });
+            CATS.forEach(function (c) { zc[c] = numOpc('z_' + c, 50, 350); ec[c] = numOpc('e_' + c, 0, 100); });
             var cb = txt('c_blip', 'equipo');
             return { e: Math.round(pct('estrategico') * 100), u: Math.round(pct('ui') * 100), s: skinOk(txt('skin', 'original')), z: IconosOpc_tam(),
                      sd: sd, zc: zc, ec: ec, eb: numOpc('e_blip', 0, 100), cb: COLORES.indexOf(cb) >= 0 ? cb : '', ar: codigoAnillos() };
@@ -58,11 +58,12 @@ var IconosOpc = (function () {
         var a = IconosOpc.anillos(), h = COLORES.indexOf(a.hover) + 1;
         return (a.seleccion === 'dom314' ? 8 : 0) + Math.max(0, h);
     }
-    function IconosOpc_tam() { var v = Number(txt('tamano', '100')); return isFinite(v) ? Math.max(50, Math.min(200, v)) : 100; }
+    function IconosOpc_tam() { var v = Number(txt('tamano', '100')); return isFinite(v) ? Math.max(50, Math.min(350, v)) : 100; }
 })();
 
 // Resolucion por icono (pura, probada en VM): que skin/PNG, tamano y opacidad le tocan a cada nombre segun cfg + categorias + bbox.
 // Con la cfg por defecto (todo null) devuelve lo mismo que el atlas anterior a ico-30.
+IconosOpc.UMBRAL_SHADER = 150;   // z (%) a partir del cual el tamano lo da el shader (marcador R = z/5, G = 5, B = 250 en el pixel 0,0 de la celda)
 IconosOpc.resolver = function (n, cfg, cats, bbox) {
     var info = (cats && cats[n]) || { c: 'otro', d: null };
     var sk = cfg.s || 'original';
@@ -77,7 +78,9 @@ IconosOpc.resolver = function (n, cfg, cats, bbox) {
     else if (cfg.ec && info.c in cfg.ec && cfg.ec[info.c] !== undefined) { e = cfg.ec[info.c]; }
     var d = (bbox && bbox[skEf] && bbox[skEf][n]) || 52;
     var zf = z / 100;
-    return { skin: skEf, blipColor: (info.c === 'blip' && cfg.cb) ? cfg.cb : '', escala: zf > 1 ? Math.min(zf, 52 / d) : zf, e: e };
+    // Hasta UMBRAL_SHADER: escala CSS dentro de la celda (tope 52/d). Por encima: marcador para particle_icon.vs (quad mas grande), sin escala CSS.
+    var marca = z > IconosOpc.UMBRAL_SHADER ? Math.round(Math.min(z, 350) / 5) : 0;
+    return { skin: skEf, blipColor: (info.c === 'blip' && cfg.cb) ? cfg.cb : '', escala: marca ? 1 : (zf > 1 ? Math.min(zf, 52 / d) : zf), e: e, marca: marca };
 };
 
 // Puente hacia el atlas (otro origen, sin acceso a los ajustes): archivo en memoria que el atlas lee por coui://.

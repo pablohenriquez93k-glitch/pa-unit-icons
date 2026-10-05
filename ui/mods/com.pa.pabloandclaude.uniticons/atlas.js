@@ -25,6 +25,9 @@
             else if (r.skin !== 'original') { src = BASE + 'skins/' + r.skin + '/icon_si_' + n + '.png'; }
             if (im.getAttribute('src') !== src) { im.setAttribute('data-skin', r.blipColor ? 'blip' : r.skin); im.setAttribute('src', src); }
             im.style.webkitTransform = r.escala === 1 ? '' : 'scale(' + r.escala + ')';
+            // marcador de factor para particle_icon.vs: 1 pixel (0,0) de la celda, bajo la imagen
+            var mc = r.marca ? 'linear-gradient(rgb(' + r.marca + ',5,250),rgb(' + r.marca + ',5,250)) no-repeat 0 0 / 1px 1px' : '';
+            if (im.style.background !== mc) { im.style.background = mc; }
             im.style.opacity = r.e === null ? '' : String(Math.sqrt(Math.max(0, Math.min(100, r.e)) / 100));   // sin valor propio: regla global
         }
     }

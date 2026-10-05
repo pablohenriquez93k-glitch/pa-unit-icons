@@ -5,9 +5,9 @@
     var L = function (t) { return '!LOC:' + t; };
     var niveles = ['100', '90', '80', '70', '60', '50', '40', '30', '20', '10'];
     var textos = niveles.map(function (n) { return n + '%'; });
-    var skins = ['original', '1_plana', '2_hueca', '3_audaz', '4_bisel', '5_neon'];
-    var skinTxt = ['Original (game icons)', '1 Flat', '2 Outline', '3 Bold', '4 Bevel', '5 Neon'].map(L);
-    var tams = ['75', '90', '100', '110', '125', '150'];
+    var skins = ['original', '2_hueca', '4_bisel'];
+    var skinTxt = ['Original (game icons)', 'Outline', 'Bevel'].map(L);
+    var tams = ['75', '90', '100', '110', '125', '150', '175', '200', '250', '300', '350'];
     var gl = L('Same as general');
     var textosGl = [gl].concat(textos), nivelesGl = ['global'].concat(niveles);
     var tamsGl = ['global'].concat(tams), tamsTxt = [gl].concat(tams.map(function (n) { return n + '%'; }));
@@ -46,7 +46,7 @@
     var PRESETS = {
         default: {},
         discreet: { estrategico: '60', tamano: '90', e_blip: '40' },
-        contrast: { skin: '3_audaz', tamano: '110', estrategico: '100' }
+        contrast: { skin: '4_bisel', tamano: '110', estrategico: '100' }
     };
     function opt(k) { return '<div class="option" data-bind="template: { name: \'setting-template\', data: $root.settingsItemMap()[\'' + G + '.' + k + '\'] }"></div>'; }
     function grupo(titulo, claves, extra) {
@@ -54,6 +54,7 @@
     }
     var html =
         '<div class="option-list iconos" style="max-height:100%;overflow-y:auto" data-bind="visible: ($root.settingGroups().indexOf(\'' + G + '\') === $root.activeSettingsGroupIndex())">' +
+        '<div class="option iconos-aviso" style="padding:6px 0;font-style:italic" data-bind="text: loc(\'!LOC:Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.\')"></div>' +
         grupo('UNIT ICONS', ['skin', 'tamano', 'estrategico', 'ui'], '<div class="option"><div class="iconos-prev" style="padding:6px 0"></div></div>') +
         grupo('STYLE BY DOMAIN', ['sk_tierra', 'sk_naval', 'sk_aire', 'sk_orbital', 'sk_estructura']) +
         grupo('SIZE AND OPACITY BY CATEGORY', ['z_unidades', 'z_edificios', 'z_orbital', 'e_unidades', 'e_edificios', 'e_orbital']) +
