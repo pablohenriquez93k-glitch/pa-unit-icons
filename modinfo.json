@@ -1,0 +1,56 @@
+{
+  "context": "client",
+  "identifier": "com.pa.pabloandclaude.uniticons",
+  "display_name": "Unit Icons",
+  "description": "Strategic unit icons: original plus 5 skins, style by domain, size and opacity by category, radar blip color, selection/hover ring options and presets (20 settings in the ICONS tab). Cosmetic only. Overrides 4 game shaders (particle_icon.fs, unit_ring_selection.fs, unit_ring_hover.fs, particle_direct_ring_selection.vs) and relies on the game's ring-diameter table: re-check after game patches. Translations are automatic and may contain errors. The rainbow selection-ring option adapts code from Rainbow Circle Ring by dom314 (no license published; used with attribution, will be removed on request).",
+  "author": "Pablo & Claude",
+  "version": "1.0.0",
+  "build": "124683",
+  "forum": "https://github.com/pablohenriquez93k-glitch/pa-unit-icons/discussions/1",
+  "date": "2026-10-05",
+  "signature": " ",
+  "priority": 150,
+  "category": [
+    "titans",
+    "ui"
+  ],
+  "scenes": {
+    "settings": [
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/comun.js",
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/anillos.js",
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/idiomas.js",
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/opciones.js"
+    ],
+    "icon_atlas": [
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/comun.js",
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/atlas.js"
+    ],
+    "live_game_selection": [
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/comun.js",
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/ui.js"
+    ],
+    "live_game_build_bar": [
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/comun.js",
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/ui.js"
+    ],
+    "start": [
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/comun.js",
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/montar.js",
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/anillos.js"
+    ],
+    "new_game": [
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/comun.js",
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/anillos.js"
+    ],
+    "connect_to_game": [
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/comun.js",
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/anillos.js"
+    ],
+    "live_game": [
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/comun.js",
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/montar.js",
+      "coui://ui/mods/com.pa.pabloandclaude.uniticons/anillos.js"
+    ]
+  },
+  "icon": "https://raw.githubusercontent.com/pablohenriquez93k-glitch/pa-unit-icons/main/icon.png"
+}
