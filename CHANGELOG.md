@@ -1,5 +1,10 @@
 # Changelog — Unit Icons
 
+## 1.0.2 (2026-10-06)
+
+- New **Icon quality** setting (ICONS tab): Standard (52 px, default, same as 1.0.1), High (104 px) or Very high (208 px). It raises the resolution of the Outline and Bevel icons, which makes them sharper at large sizes (above 200 %); the Original style keeps the game's own 52 px icons. Only the selected quality is loaded. On-screen size is unchanged: the overridden `particle_icon.vs` compensates for the larger atlas cell.
+- 21 settings; the new text is translated into the same 27 locales (automatic translations).
+
 ## 1.0.1 (2026-10-05)
 
 - Icon styles are now Original, Outline and Bevel (Flat, Bold and Neon removed). New note in the ICONS tab: ideas for new icons can be sent in the Planetary Annihilation Discord, channel #making-mods.

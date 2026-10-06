@@ -51,7 +51,11 @@
   "Hover ring color": "Color del anillo de hover",
   "Ring changes reload the game view.": "Los cambios de anillo recargan la vista de la partida.",
   "Translations are automatic and may contain errors.": "Las traducciones son automáticas y pueden contener errores.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "¿Quieres que añadamos un icono al mod? Avísanos en el Discord de Planetary Annihilation, canal #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "¿Quieres que añadamos un icono al mod? Avísanos en el Discord de Planetary Annihilation, canal #making-mods.",
+  "Icon quality (Outline / Bevel)": "Calidad de iconos (Contorno / Bisel)",
+  "Standard (52 px)": "Estándar (52 px)",
+  "High (104 px)": "Alta (104 px)",
+  "Very high (208 px)": "Muy alta (208 px)"
  },
  "fr": {
   "ICONS": "ICÔNES",
@@ -101,7 +105,11 @@
   "Hover ring color": "Couleur de l’anneau de survol",
   "Ring changes reload the game view.": "Les changements d’anneaux rechargent la vue de la partie.",
   "Translations are automatic and may contain errors.": "Les traductions sont automatiques et peuvent contenir des erreurs.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Vous voulez qu'on ajoute une icône au mod ? Dites-le-nous sur le Discord de Planetary Annihilation, canal #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Vous voulez qu'on ajoute une icône au mod ? Dites-le-nous sur le Discord de Planetary Annihilation, canal #making-mods.",
+  "Icon quality (Outline / Bevel)": "Qualité des icônes (Contour / Biseau)",
+  "Standard (52 px)": "Standard (52 px)",
+  "High (104 px)": "Haute (104 px)",
+  "Very high (208 px)": "Très haute (208 px)"
  },
  "de": {
   "ICONS": "SYMBOLE",
@@ -151,7 +159,11 @@
   "Hover ring color": "Farbe des Hover-Rings",
   "Ring changes reload the game view.": "Änderungen an Ringen laden die Spielansicht neu.",
   "Translations are automatic and may contain errors.": "Die Übersetzungen sind automatisch und können Fehler enthalten.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Möchtest du ein Symbol im Mod ergänzt haben? Sag uns Bescheid im Planetary-Annihilation-Discord, Kanal #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Möchtest du ein Symbol im Mod ergänzt haben? Sag uns Bescheid im Planetary-Annihilation-Discord, Kanal #making-mods.",
+  "Icon quality (Outline / Bevel)": "Symbolqualität (Umriss / Abschrägung)",
+  "Standard (52 px)": "Standard (52 px)",
+  "High (104 px)": "Hoch (104 px)",
+  "Very high (208 px)": "Sehr hoch (208 px)"
  },
  "it": {
   "ICONS": "ICONE",
@@ -201,7 +213,11 @@
   "Hover ring color": "Colore dell’anello al passaggio del mouse",
   "Ring changes reload the game view.": "Le modifiche agli anelli ricaricano la vista della partita.",
   "Translations are automatic and may contain errors.": "Le traduzioni sono automatiche e possono contenere errori.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Vuoi che aggiungiamo un'icona al mod? Faccelo sapere sul Discord di Planetary Annihilation, canale #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Vuoi che aggiungiamo un'icona al mod? Faccelo sapere sul Discord di Planetary Annihilation, canale #making-mods.",
+  "Icon quality (Outline / Bevel)": "Qualità delle icone (Contorno / Smussato)",
+  "Standard (52 px)": "Standard (52 px)",
+  "High (104 px)": "Alta (104 px)",
+  "Very high (208 px)": "Molto alta (208 px)"
  },
  "pt": {
   "ICONS": "ÍCONES",
@@ -251,7 +267,11 @@
   "Hover ring color": "Cor do anel sob o cursor",
   "Ring changes reload the game view.": "As alterações dos anéis recarregam a vista da partida.",
   "Translations are automatic and may contain errors.": "As traduções são automáticas e podem conter erros.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Quer que adicionemos um ícone ao mod? Avise-nos no Discord de Planetary Annihilation, canal #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Quer que adicionemos um ícone ao mod? Avise-nos no Discord de Planetary Annihilation, canal #making-mods.",
+  "Icon quality (Outline / Bevel)": "Qualidade dos ícones (Contorno / Chanfro)",
+  "Standard (52 px)": "Padrão (52 px)",
+  "High (104 px)": "Alta (104 px)",
+  "Very high (208 px)": "Muito alta (208 px)"
  },
  "ru": {
   "ICONS": "ЗНАЧКИ",
@@ -301,7 +321,11 @@
   "Hover ring color": "Цвет кольца наведения",
   "Ring changes reload the game view.": "Изменения колец перезагружают вид игры.",
   "Translations are automatic and may contain errors.": "Переводы выполнены автоматически и могут содержать ошибки.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Хотите, чтобы в мод добавили значок? Напишите нам в Discord Planetary Annihilation, канал #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Хотите, чтобы в мод добавили значок? Напишите нам в Discord Planetary Annihilation, канал #making-mods.",
+  "Icon quality (Outline / Bevel)": "Качество значков (Контур / Скос)",
+  "Standard (52 px)": "Стандартное (52 px)",
+  "High (104 px)": "Высокое (104 px)",
+  "Very high (208 px)": "Очень высокое (208 px)"
  },
  "uk": {
   "ICONS": "ЗНАЧКИ",
@@ -351,7 +375,11 @@
   "Hover ring color": "Колір кільця наведення",
   "Ring changes reload the game view.": "Зміни кілець перезавантажують вигляд гри.",
   "Translations are automatic and may contain errors.": "Переклади виконано автоматично, і вони можуть містити помилки.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Хочете, щоб до моду додали значок? Напишіть нам у Discord Planetary Annihilation, канал #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Хочете, щоб до моду додали значок? Напишіть нам у Discord Planetary Annihilation, канал #making-mods.",
+  "Icon quality (Outline / Bevel)": "Якість значків (Контур / Скіс)",
+  "Standard (52 px)": "Стандартна (52 px)",
+  "High (104 px)": "Висока (104 px)",
+  "Very high (208 px)": "Дуже висока (208 px)"
  },
  "pl": {
   "ICONS": "IKONY",
@@ -401,7 +429,11 @@
   "Hover ring color": "Kolor pierścienia wskazania",
   "Ring changes reload the game view.": "Zmiany pierścieni ponownie wczytują widok gry.",
   "Translations are automatic and may contain errors.": "Tłumaczenia są automatyczne i mogą zawierać błędy.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Chcesz, żebyśmy dodali ikonę do moda? Daj nam znać na Discordzie Planetary Annihilation, kanał #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Chcesz, żebyśmy dodali ikonę do moda? Daj nam znać na Discordzie Planetary Annihilation, kanał #making-mods.",
+  "Icon quality (Outline / Bevel)": "Jakość ikon (Kontur / Skos)",
+  "Standard (52 px)": "Standardowa (52 px)",
+  "High (104 px)": "Wysoka (104 px)",
+  "Very high (208 px)": "Bardzo wysoka (208 px)"
  },
  "cs": {
   "ICONS": "IKONY",
@@ -451,7 +483,11 @@
   "Hover ring color": "Barva kruhu pod kurzorem",
   "Ring changes reload the game view.": "Změny kruhů znovu načtou pohled hry.",
   "Translations are automatic and may contain errors.": "Překlady jsou automatické a mohou obsahovat chyby.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Chcete do modu přidat ikonu? Dejte nám vědět na Discordu Planetary Annihilation, kanál #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Chcete do modu přidat ikonu? Dejte nám vědět na Discordu Planetary Annihilation, kanál #making-mods.",
+  "Icon quality (Outline / Bevel)": "Kvalita ikon (Obrys / Zkosení)",
+  "Standard (52 px)": "Standardní (52 px)",
+  "High (104 px)": "Vysoká (104 px)",
+  "Very high (208 px)": "Velmi vysoká (208 px)"
  },
  "da": {
   "ICONS": "IKONER",
@@ -501,7 +537,11 @@
   "Hover ring color": "Farve på ring under markøren",
   "Ring changes reload the game view.": "Ændringer af ringe genindlæser spilvisningen.",
   "Translations are automatic and may contain errors.": "Oversættelserne er automatiske og kan indeholde fejl.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Vil du have en ikon tilføjet til modden? Sig til på Planetary Annihilations Discord, kanalen #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Vil du have en ikon tilføjet til modden? Sig til på Planetary Annihilations Discord, kanalen #making-mods.",
+  "Icon quality (Outline / Bevel)": "Ikonkvalitet (Omrids / Affasning)",
+  "Standard (52 px)": "Standard (52 px)",
+  "High (104 px)": "Høj (104 px)",
+  "Very high (208 px)": "Meget høj (208 px)"
  },
  "fi": {
   "ICONS": "KUVAKKEET",
@@ -551,7 +591,11 @@
   "Hover ring color": "Osoitinrenkaan väri",
   "Ring changes reload the game view.": "Renkaiden muutokset lataavat pelinäkymän uudelleen.",
   "Translations are automatic and may contain errors.": "Käännökset on tehty automaattisesti, ja niissä voi olla virheitä.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Haluatko, että modiin lisätään kuvake? Kerro meille Planetary Annihilationin Discordissa, kanavalla #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Haluatko, että modiin lisätään kuvake? Kerro meille Planetary Annihilationin Discordissa, kanavalla #making-mods.",
+  "Icon quality (Outline / Bevel)": "Kuvakkeiden laatu (Ääriviiva / Viiste)",
+  "Standard (52 px)": "Vakio (52 px)",
+  "High (104 px)": "Korkea (104 px)",
+  "Very high (208 px)": "Erittäin korkea (208 px)"
  },
  "hu": {
   "ICONS": "IKONOK",
@@ -601,7 +645,11 @@
   "Hover ring color": "Rámutatási gyűrű színe",
   "Ring changes reload the game view.": "A gyűrűk változásai újratöltik a játék nézetét.",
   "Translations are automatic and may contain errors.": "A fordítások automatikusak, és hibákat tartalmazhatnak.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Szeretnéd, hogy felvegyünk egy ikont a modba? Szólj nekünk a Planetary Annihilation Discordján, a #making-mods csatornán."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Szeretnéd, hogy felvegyünk egy ikont a modba? Szólj nekünk a Planetary Annihilation Discordján, a #making-mods csatornán.",
+  "Icon quality (Outline / Bevel)": "Ikonminőség (Körvonal / Letörés)",
+  "Standard (52 px)": "Normál (52 px)",
+  "High (104 px)": "Magas (104 px)",
+  "Very high (208 px)": "Nagyon magas (208 px)"
  },
  "nl": {
   "ICONS": "PICTOGRAMMEN",
@@ -651,7 +699,11 @@
   "Hover ring color": "Kleur van de aanwijsring",
   "Ring changes reload the game view.": "Wijzigingen aan ringen laden de spelweergave opnieuw.",
   "Translations are automatic and may contain errors.": "De vertalingen zijn automatisch en kunnen fouten bevatten.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Wil je dat er een pictogram aan de mod wordt toegevoegd? Laat het ons weten in de Planetary Annihilation-Discord, kanaal #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Wil je dat er een pictogram aan de mod wordt toegevoegd? Laat het ons weten in de Planetary Annihilation-Discord, kanaal #making-mods.",
+  "Icon quality (Outline / Bevel)": "Pictogramkwaliteit (Omlijning / Afschuining)",
+  "Standard (52 px)": "Standaard (52 px)",
+  "High (104 px)": "Hoog (104 px)",
+  "Very high (208 px)": "Zeer hoog (208 px)"
  },
  "no": {
   "ICONS": "IKONER",
@@ -701,7 +753,11 @@
   "Hover ring color": "Farge på pekerringen",
   "Ring changes reload the game view.": "Endringer i ringene laster spillvisningen på nytt.",
   "Translations are automatic and may contain errors.": "Oversettelsene er automatiske og kan inneholde feil.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Vil du ha et ikon lagt til i modden? Si fra på Planetary Annihilations Discord, kanalen #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Vil du ha et ikon lagt til i modden? Si fra på Planetary Annihilations Discord, kanalen #making-mods.",
+  "Icon quality (Outline / Bevel)": "Ikonkvalitet (Omriss / Skråkant)",
+  "Standard (52 px)": "Standard (52 px)",
+  "High (104 px)": "Høy (104 px)",
+  "Very high (208 px)": "Svært høy (208 px)"
  },
  "ro": {
   "ICONS": "PICTOGRAME",
@@ -751,7 +807,11 @@
   "Hover ring color": "Culoarea inelului de indicare",
   "Ring changes reload the game view.": "Modificările inelelor reîncarcă vizualizarea jocului.",
   "Translations are automatic and may contain errors.": "Traducerile sunt automate și pot conține erori.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Vrei să adăugăm o pictogramă în mod? Spune-ne pe Discord-ul Planetary Annihilation, canalul #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Vrei să adăugăm o pictogramă în mod? Spune-ne pe Discord-ul Planetary Annihilation, canalul #making-mods.",
+  "Icon quality (Outline / Bevel)": "Calitatea pictogramelor (Contur / Teșit)",
+  "Standard (52 px)": "Standard (52 px)",
+  "High (104 px)": "Înaltă (104 px)",
+  "Very high (208 px)": "Foarte înaltă (208 px)"
  },
  "sv": {
   "ICONS": "IKONER",
@@ -801,7 +861,11 @@
   "Hover ring color": "Pekarringens färg",
   "Ring changes reload the game view.": "Ändringar av ringar laddar om spelvyn.",
   "Translations are automatic and may contain errors.": "Översättningarna är automatiska och kan innehålla fel.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Vill du att en ikon läggs till i modden? Hör av dig på Planetary Annihilations Discord, kanalen #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Vill du att en ikon läggs till i modden? Hör av dig på Planetary Annihilations Discord, kanalen #making-mods.",
+  "Icon quality (Outline / Bevel)": "Ikonkvalitet (Kontur / Fasning)",
+  "Standard (52 px)": "Standard (52 px)",
+  "High (104 px)": "Hög (104 px)",
+  "Very high (208 px)": "Mycket hög (208 px)"
  },
  "tr": {
   "ICONS": "SİMGELER",
@@ -851,7 +915,11 @@
   "Hover ring color": "İmleç halkası rengi",
   "Ring changes reload the game view.": "Halka değişiklikleri oyun görünümünü yeniden yükler.",
   "Translations are automatic and may contain errors.": "Çeviriler otomatiktir ve hata içerebilir.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Moda bir simge eklenmesini ister misin? Planetary Annihilation Discord'unda #making-mods kanalından bize bildir."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "Moda bir simge eklenmesini ister misin? Planetary Annihilation Discord'unda #making-mods kanalından bize bildir.",
+  "Icon quality (Outline / Bevel)": "Simge kalitesi (Taslak / Pah)",
+  "Standard (52 px)": "Standart (52 px)",
+  "High (104 px)": "Yüksek (104 px)",
+  "Very high (208 px)": "Çok yüksek (208 px)"
  },
  "ja": {
   "ICONS": "アイコン",
@@ -901,7 +969,11 @@
   "Hover ring color": "ホバーリングの色",
   "Ring changes reload the game view.": "リングの変更はゲームの表示を再読み込みします。",
   "Translations are automatic and may contain errors.": "翻訳は自動生成のため、誤りが含まれている場合があります。",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "MODにアイコンを追加してほしいですか？Planetary AnnihilationのDiscord、#making-modsチャンネルでお知らせください。"
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "MODにアイコンを追加してほしいですか？Planetary AnnihilationのDiscord、#making-modsチャンネルでお知らせください。",
+  "Icon quality (Outline / Bevel)": "アイコンの品質（アウトライン／ベベル）",
+  "Standard (52 px)": "標準 (52 px)",
+  "High (104 px)": "高 (104 px)",
+  "Very high (208 px)": "最高 (208 px)"
  },
  "ko": {
   "ICONS": "아이콘",
@@ -951,7 +1023,11 @@
   "Hover ring color": "호버 링 색상",
   "Ring changes reload the game view.": "링 변경 사항은 게임 화면을 다시 불러옵니다.",
   "Translations are automatic and may contain errors.": "번역은 자동으로 생성되었으며 오류가 있을 수 있습니다.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "모드에 아이콘을 추가하고 싶으신가요? Planetary Annihilation Discord의 #making-mods 채널에서 알려 주세요."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "모드에 아이콘을 추가하고 싶으신가요? Planetary Annihilation Discord의 #making-mods 채널에서 알려 주세요.",
+  "Icon quality (Outline / Bevel)": "아이콘 품질 (윤곽선 / 베벨)",
+  "Standard (52 px)": "표준 (52 px)",
+  "High (104 px)": "높음 (104 px)",
+  "Very high (208 px)": "매우 높음 (208 px)"
  },
  "ar": {
   "ICONS": "الأيقونات",
@@ -1001,7 +1077,11 @@
   "Hover ring color": "لون حلقة التمرير",
   "Ring changes reload the game view.": "تؤدي تغييرات الحلقات إلى إعادة تحميل عرض اللعبة.",
   "Translations are automatic and may contain errors.": "الترجمات آلية وقد تحتوي على أخطاء.",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "هل تريد إضافة أيقونة إلى المود؟ أخبرنا في ديسكورد Planetary Annihilation، قناة #making-mods."
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "هل تريد إضافة أيقونة إلى المود؟ أخبرنا في ديسكورد Planetary Annihilation، قناة #making-mods.",
+  "Icon quality (Outline / Bevel)": "جودة الأيقونات (مخطط / مشطوف)",
+  "Standard (52 px)": "قياسية (52 px)",
+  "High (104 px)": "عالية (104 px)",
+  "Very high (208 px)": "عالية جدًا (208 px)"
  },
  "zh-CN": {
   "ICONS": "图标",
@@ -1051,7 +1131,11 @@
   "Hover ring color": "悬停圆环颜色",
   "Ring changes reload the game view.": "圆环更改会重新加载游戏画面。",
   "Translations are automatic and may contain errors.": "翻译为自动生成，可能存在错误。",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "想让模组新增一个图标吗？请到 Planetary Annihilation 的 Discord、#making-mods 频道告诉我们。"
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "想让模组新增一个图标吗？请到 Planetary Annihilation 的 Discord、#making-mods 频道告诉我们。",
+  "Icon quality (Outline / Bevel)": "图标质量（轮廓 / 斜面）",
+  "Standard (52 px)": "标准 (52 px)",
+  "High (104 px)": "高 (104 px)",
+  "Very high (208 px)": "超高 (208 px)"
  },
  "zh-TW": {
   "ICONS": "圖示",
@@ -1101,7 +1185,11 @@
   "Hover ring color": "懸停圓環顏色",
   "Ring changes reload the game view.": "圓環變更會重新載入遊戲畫面。",
   "Translations are automatic and may contain errors.": "翻譯為自動產生，可能有錯誤。",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "想讓模組新增一個圖示嗎？請到 Planetary Annihilation 的 Discord、#making-mods 頻道告訴我們。"
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "想讓模組新增一個圖示嗎？請到 Planetary Annihilation 的 Discord、#making-mods 頻道告訴我們。",
+  "Icon quality (Outline / Bevel)": "圖示品質（輪廓 / 斜角）",
+  "Standard (52 px)": "標準 (52 px)",
+  "High (104 px)": "高 (104 px)",
+  "Very high (208 px)": "超高 (208 px)"
  },
  "zh-HK": {
   "ICONS": "圖示",
@@ -1151,7 +1239,11 @@
   "Hover ring color": "懸停圓環顏色",
   "Ring changes reload the game view.": "圓環變更會重新載入遊戲畫面。",
   "Translations are automatic and may contain errors.": "翻譯為自動產生，可能有錯誤。",
-  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "想讓模組新增一個圖示嗎？請到 Planetary Annihilation 的 Discord、#making-mods 頻道告訴我們。"
+  "Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.": "想讓模組新增一個圖示嗎？請到 Planetary Annihilation 的 Discord、#making-mods 頻道告訴我們。",
+  "Icon quality (Outline / Bevel)": "圖示品質（輪廓 / 斜角）",
+  "Standard (52 px)": "標準 (52 px)",
+  "High (104 px)": "高 (104 px)",
+  "Very high (208 px)": "超高 (208 px)"
  }
 };
     IconosOpc.TRAD = TRAD;

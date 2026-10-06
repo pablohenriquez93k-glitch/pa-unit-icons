@@ -27,6 +27,7 @@ var IconosOpc = (function () {
     var DOMINIOS = ['tierra', 'naval', 'aire', 'orbital', 'estructura'];
     var CATS = ['unidades', 'edificios', 'orbital'];
     var COLORES = ['rojo', 'amarillo', 'verde', 'cian', 'azul', 'magenta', 'blanco'];
+    function calidadOk(v) { return v === '2' || v === '4' ? Number(v) : 1; }   // factor de resolucion: 1 = 52 px, 2 = 104 px, 4 = 208 px
     function skinOk(v) { return v === '2_hueca' || v === '4_bisel' ? v : 'original'; }
     function numOpc(clave, min, max) {   // 'global' (o invalido) -> null
         var v = txt(clave, 'global');
@@ -37,6 +38,7 @@ var IconosOpc = (function () {
     return {
         G: G, estrategico: function () { return pct('estrategico'); }, ui: function () { return pct('ui'); },
         skin: function () { return skinOk(txt('skin', 'original')); },
+        calidad: function () { return calidadOk(txt('calidad', '1')); },
         tam: function () { var v = Number(txt('tamano', '100')); return isFinite(v) ? Math.max(50, Math.min(350, v)) : 100; },
         DOMINIOS: DOMINIOS, CATS: CATS, COLORES: COLORES,
         anillos: function () {
@@ -49,7 +51,7 @@ var IconosOpc = (function () {
             DOMINIOS.forEach(function (d) { var v = txt('sk_' + d, 'global'); sd[d] = v === 'global' ? null : skinOk(v); });
             CATS.forEach(function (c) { zc[c] = numOpc('z_' + c, 50, 350); ec[c] = numOpc('e_' + c, 0, 100); });
             var cb = txt('c_blip', 'equipo');
-            return { e: Math.round(pct('estrategico') * 100), u: Math.round(pct('ui') * 100), s: skinOk(txt('skin', 'original')), z: IconosOpc_tam(),
+            return { e: Math.round(pct('estrategico') * 100), u: Math.round(pct('ui') * 100), s: skinOk(txt('skin', 'original')), q: calidadOk(txt('calidad', '1')), z: IconosOpc_tam(),
                      sd: sd, zc: zc, ec: ec, eb: numOpc('e_blip', 0, 100), cb: COLORES.indexOf(cb) >= 0 ? cb : '', ar: codigoAnillos() };
         }
     };
@@ -64,6 +66,7 @@ var IconosOpc = (function () {
 // Resolucion por icono (pura, probada en VM): que skin/PNG, tamano y opacidad le tocan a cada nombre segun cfg + categorias + bbox.
 // Con la cfg por defecto (todo null) devuelve lo mismo que el atlas anterior a ico-30.
 IconosOpc.UMBRAL_SHADER = 150;   // z (%) a partir del cual el tamano lo da el shader (marcador R = z/5, G = 5, B = 250 en el pixel 0,0 de la celda)
+IconosOpc.OBJETOS_MAPA = ['metal_splat_02', 'energy_spot_01', 'control_point_01'];
 IconosOpc.resolver = function (n, cfg, cats, bbox) {
     var info = (cats && cats[n]) || { c: 'otro', d: null };
     var sk = cfg.s || 'original';
@@ -79,8 +82,11 @@ IconosOpc.resolver = function (n, cfg, cats, bbox) {
     var d = (bbox && bbox[skEf] && bbox[skEf][n]) || 52;
     var zf = z / 100;
     // Hasta UMBRAL_SHADER: escala CSS dentro de la celda (tope 52/d). Por encima: marcador para particle_icon.vs (quad mas grande), sin escala CSS.
-    var marca = z > IconosOpc.UMBRAL_SHADER ? Math.round(Math.min(z, 350) / 5) : 0;
-    return { skin: skEf, blipColor: (info.c === 'blip' && cfg.cb) ? cfg.cb : '', escala: marca ? 1 : (zf > 1 ? Math.min(zf, 52 / d) : zf), e: e, marca: marca };
+    var q = (cfg.q === 2 || cfg.q === 4) ? cfg.q : 1;
+    // Elementos del mapa (puntos de metal/energia, punto de control): el motor los dibuja sin leer el marcador y al tamano de la celda -> con calidad > 1 se encogen con CSS 1/q.
+    var objeto = q > 1 && IconosOpc.OBJETOS_MAPA.indexOf(n) >= 0;
+    var marca = !objeto && (z > IconosOpc.UMBRAL_SHADER || q > 1) ? Math.round(Math.min(z, 350) / 5) : 0;   // con calidad > 1 el shader fija siempre el tamano (el motor dibuja la celda 52*q px)
+    return { skin: skEf, q: q, blipColor: (info.c === 'blip' && cfg.cb) ? cfg.cb : '', escala: objeto ? (z > IconosOpc.UMBRAL_SHADER ? 1 : (zf > 1 ? Math.min(zf, 52 / d) : zf)) / q : (marca ? 1 : (zf > 1 ? Math.min(zf, 52 / d) : zf)), e: e, marca: marca };
 };
 
 // Puente hacia el atlas (otro origen, sin acceso a los ajustes): archivo en memoria que el atlas lee por coui://.

@@ -9,7 +9,8 @@
 // y se excluye el borde (marcador incluido) del muestreo. Sin marcador (o si no se puede leer) el comportamiento es el del original.
 uniform sampler2D Texture;
 const float ICONOS_CELDA = 52.0;
-const vec2  ICONOS_CODIGO = vec2(0.0196, 0.9804);  // G, B esperados en el marcador (5/255, 250/255)
+const float ICONOS_B = 0.9804;                     // B esperado en el marcador (250/255)
+// G del marcador = 5 * calidad (5, 10 o 20): la celda del atlas mide 52 * calidad px y el motor dibuja el quad a ese tamano; el factor se divide por la calidad.
 
 out vec4 v_ColorPrimary;
 out vec4 v_ColorSecondary;
@@ -50,8 +51,9 @@ void main()
     float iconosFactor = 1.0;
     {
         vec4 mk = textureLod(Texture, vUVAndExtra.xy + atlas_dims.xy * (0.5 / ICONOS_CELDA), 0.0).bgra;
-        if (mk.a > 0.98 && abs(mk.g - ICONOS_CODIGO.x) < 0.012 && abs(mk.b - ICONOS_CODIGO.y) < 0.012)
-            iconosFactor = clamp(mk.r * 255.0 * 5.0 / 100.0, 1.0, 3.5) * ((ICONOS_CELDA - 3.0) / ICONOS_CELDA);
+        float calidad = floor(mk.g * 255.0 / 5.0 + 0.5);
+        if (mk.a > 0.98 && (calidad == 1.0 || calidad == 2.0 || calidad == 4.0) && abs(mk.g * 255.0 - 5.0 * calidad) < 3.0 && abs(mk.b - ICONOS_B) < 0.012)
+            iconosFactor = clamp(mk.r * 255.0 * 5.0 / 100.0 / calidad, 0.2, 3.5) * ((ICONOS_CELDA - 3.0) / ICONOS_CELDA);
     }
 
     // offset by vert position and scale

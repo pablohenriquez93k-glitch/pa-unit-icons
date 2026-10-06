@@ -5,7 +5,7 @@
     var RUTA = 'coui://' + IconosOpc.RUTA_MEM;
     var MODID = IconosOpc.G;
     var BASE = 'coui://ui/mods/' + MODID + '/';
-    var cur = { e: null, cfg: null, txt: null };
+    var cur = { e: null, cfg: null, txt: null, q: 1 };
     var bbox = null, cats = null;
     function nombre(img) {
         var m = /icon_si_(.+)\.png/.exec(img.getAttribute('data-n') || img.getAttribute('src') || '');
@@ -13,7 +13,7 @@
     }
     function aplicarImgs() {
         var imgs = document.querySelectorAll('#page img');
-        var cfg = cur.cfg || { s: 'original', z: 100 };
+        var cfg = cur.cfg || { s: 'original', z: 100, q: 1 };
         for (var i = 0; i < imgs.length; i++) {
             var im = imgs[i], n = nombre(im);
             if (!n) { continue; }
@@ -22,14 +22,23 @@
             var r = IconosOpc.resolver(n, cfg, cats, bbox);
             var src = im.getAttribute('data-src0');
             if (r.blipColor) { src = BASE + 'blips/' + r.skin + '/icon_si_blip_' + r.blipColor + '.png'; }
-            else if (r.skin !== 'original') { src = BASE + 'skins/' + r.skin + '/icon_si_' + n + '.png'; }
+            else if (r.skin !== 'original') { src = BASE + (r.q > 1 ? 'skins_' + (52 * r.q) : 'skins') + '/' + r.skin + '/icon_si_' + n + '.png'; }
             if (im.getAttribute('src') !== src) { im.setAttribute('data-skin', r.blipColor ? 'blip' : r.skin); im.setAttribute('src', src); }
             im.style.webkitTransform = r.escala === 1 ? '' : 'scale(' + r.escala + ')';
             // marcador de factor para particle_icon.vs: 1 pixel (0,0) de la celda, bajo la imagen
-            var mc = r.marca ? 'linear-gradient(rgb(' + r.marca + ',5,250),rgb(' + r.marca + ',5,250)) no-repeat 0 0 / 1px 1px' : '';
+            var mc = r.marca ? 'linear-gradient(rgb(' + r.marca + ',' + (5 * r.q) + ',250),rgb(' + r.marca + ',' + (5 * r.q) + ',250)) no-repeat 0 0 / ' + r.q + 'px ' + r.q + 'px' : '';
             if (im.style.background !== mc) { im.style.background = mc; }
             im.style.opacity = r.e === null ? '' : String(Math.sqrt(Math.max(0, Math.min(100, r.e)) / 100));   // sin valor propio: regla global
         }
+    }
+    // Calidad: el tamano de celda del atlas (52 / 104 / 208 px). El original envia 52; con otra calidad se reenvia la lista con la celda nueva.
+    function celda(q) {
+        if (q === cur.q) { return; }
+        cur.q = q;
+        var st = document.getElementById('iconos_celda_css');
+        if (!st) { st = document.createElement('style'); st.id = 'iconos_celda_css'; document.head.appendChild(st); }
+        st.textContent = q === 1 ? '' : '#page img { width: ' + (52 * q) + 'px; height: ' + (52 * q) + 'px; }';
+        try { if (window.model && model.strategicIcons) { engine.call('handle_icon_list', model.strategicIcons(), 52 * q); } } catch (e) { console.error('[Unit Icons] handle_icon_list', e); }
     }
     function css() {
         var o = Math.sqrt(Math.max(0, Math.min(100, cur.e === null ? 100 : cur.e)) / 100);
@@ -55,8 +64,9 @@
             if (txt === cur.txt && e === cur.e) { return; }
             cur.txt = txt;
             var z = Number(d.z); if (!isFinite(z) || z <= 0) { z = 100; }
-            cur.cfg = { s: typeof d.s === 'string' ? d.s : 'original', z: z, sd: d.sd || {}, zc: d.zc || {}, ec: d.ec || {}, eb: (d.eb === undefined ? null : d.eb), cb: typeof d.cb === 'string' ? d.cb : '' };
+            cur.cfg = { s: typeof d.s === 'string' ? d.s : 'original', q: (Number(d.q) === 2 || Number(d.q) === 4) ? Number(d.q) : 1, z: z, sd: d.sd || {}, zc: d.zc || {}, ec: d.ec || {}, eb: (d.eb === undefined ? null : d.eb), cb: typeof d.cb === 'string' ? d.cb : '' };
             if (e !== cur.e) { cur.e = e; css(); }
+            celda(cur.cfg.q);
             aplicarImgs();
         });
     }

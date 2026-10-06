@@ -5,7 +5,7 @@ Client mod for **Planetary Annihilation: TITANS** (build 124683). Cosmetic only.
 Forum: https://github.com/pablohenriquez93k-glitch/pa-unit-icons/discussions/1
 
 ## What it does
-Replaces the strategic unit icons with a domain × role icon system (31 glyphs). Choose the original icons or one of 2 custom styles (Outline, Bevel); style per domain (land, naval, air, orbital, structure); size (75–350 %; above 200 % is meant for 4K screens) and opacity per category; radar blip color; selection and hover ring options; presets and a reset button. 20 settings in the **ICONS** tab of Settings.
+Replaces the strategic unit icons with a domain × role icon system (31 glyphs). Choose the original icons or one of 2 custom styles (Outline, Bevel); style per domain (land, naval, air, orbital, structure); size (75–350 %; above 200 % is meant for 4K screens), icon quality (Standard 52 px, High 104 px, Very high 208 px: sharper Outline/Bevel icons at large sizes) and opacity per category; radar blip color; selection and hover ring options; presets and a reset button. 21 settings in the **ICONS** tab of Settings.
 
 ## Install
 Easiest: install **Unit Icons** from the in-game **Community Mods** index. Manual install: close the game and copy the contents of the downloaded package into `%LOCALAPPDATA%\Uber Entertainment\Planetary Annihilation\client_mods\com.pa.pabloandclaude.uniticons\` so that `modinfo.json` sits directly inside that folder.

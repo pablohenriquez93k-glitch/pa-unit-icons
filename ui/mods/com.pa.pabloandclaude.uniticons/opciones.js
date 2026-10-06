@@ -7,6 +7,8 @@
     var textos = niveles.map(function (n) { return n + '%'; });
     var skins = ['original', '2_hueca', '4_bisel'];
     var skinTxt = ['Original (game icons)', 'Outline', 'Bevel'].map(L);
+    var calidades = ['1', '2', '4'];
+    var calidadTxt = ['Standard (52 px)', 'High (104 px)', 'Very high (208 px)'].map(L);
     var tams = ['75', '90', '100', '110', '125', '150', '175', '200', '250', '300', '350'];
     var gl = L('Same as general');
     var textosGl = [gl].concat(textos), nivelesGl = ['global'].concat(niveles);
@@ -21,6 +23,7 @@
         local_only: true,
         settings: {
             skin: { title: L('Icon style'), type: 'select', options: skins, optionsText: skinTxt, default: 'original' },
+            calidad: { title: L('Icon quality (Outline / Bevel)'), type: 'select', options: calidades, optionsText: calidadTxt, default: '1' },
             tamano: { title: L('Strategic icon size'), type: 'select', options: tams, optionsText: tams.map(function (n) { return n + '%'; }), default: '100' },
             estrategico: { title: L('Strategic icon opacity'), type: 'select', options: niveles, optionsText: textos, default: '100' },
             ui: { title: L('Unit portrait opacity (selection / build bar)'), type: 'select', options: niveles, optionsText: textos, default: '100' },
@@ -55,7 +58,7 @@
     var html =
         '<div class="option-list iconos" style="max-height:100%;overflow-y:auto" data-bind="visible: ($root.settingGroups().indexOf(\'' + G + '\') === $root.activeSettingsGroupIndex())">' +
         '<div class="option iconos-aviso" style="padding:6px 0;font-style:italic" data-bind="text: loc(\'!LOC:Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.\')"></div>' +
-        grupo('UNIT ICONS', ['skin', 'tamano', 'estrategico', 'ui'], '<div class="option"><div class="iconos-prev" style="padding:6px 0"></div></div>') +
+        grupo('UNIT ICONS', ['skin', 'calidad', 'tamano', 'estrategico', 'ui'], '<div class="option"><div class="iconos-prev" style="padding:6px 0"></div></div>') +
         grupo('STYLE BY DOMAIN', ['sk_tierra', 'sk_naval', 'sk_aire', 'sk_orbital', 'sk_estructura']) +
         grupo('SIZE AND OPACITY BY CATEGORY', ['z_unidades', 'z_edificios', 'z_orbital', 'e_unidades', 'e_edificios', 'e_orbital']) +
         grupo('RADAR BLIPS', ['e_blip', 'c_blip']) +
