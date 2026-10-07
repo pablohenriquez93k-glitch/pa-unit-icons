@@ -1,5 +1,13 @@
 # Changelog — Unit Icons
 
+## 1.0.4 (2026-10-07)
+
+- Fixed: with High or Very high icon quality and a strategic icon opacity below 100 %, icons were drawn 2× or 4× too large. Opacity no longer affects the size marker, so icons keep the game's size at every quality, size and opacity. This also fixes sizes above 150 % being ignored when opacity was below 100 %.
+- New **Metal spot color** setting (new **PLANET MARKERS** section): the game's green metal spot or red, yellow, green, cyan, blue, magenta or white.
+- Planet markers (metal spots, metal spot preview, energy spots, control points) now always look as in the game in every icon style.
+- Fixed the ICONS tab layout on small windows (sections overlapped). "Icon quality" title no longer says Outline/Bevel only.
+- 23 settings; new texts translated into the same 27 locales (automatic translations).
+
 ## 1.0.3 (2026-10-07)
 
 - New icon style **Original (Enhanced)**: the game's own icons redrawn as clean vector art (131 icons) for the High (104 px) and Very high (208 px) icon quality, with team color as in the game. At Standard quality it uses the game's 52 px icons, so the improvement shows at high icon quality and large UI scale. Asteroid, avatar and map-object icons stay as in the game.

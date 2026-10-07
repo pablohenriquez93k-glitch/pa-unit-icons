@@ -52,9 +52,9 @@ var IconosOpc = (function () {
             var sd = {}, zc = {}, ec = {};
             DOMINIOS.forEach(function (d) { var v = txt('sk_' + d, 'global'); sd[d] = v === 'global' ? null : skinOk(v); });
             CATS.forEach(function (c) { zc[c] = numOpc('z_' + c, 50, 350); ec[c] = numOpc('e_' + c, 0, 100); });
-            var cb = txt('c_blip', 'equipo');
+            var cb = txt('c_blip', 'equipo'), cmt = txt('c_metal', 'original');
             return { e: Math.round(pct('estrategico') * 100), u: Math.round(pct('ui') * 100), s: skinOk(txt('skin', 'original')), q: calidadOk(txt('calidad', '1')), cm: comandanteOk(txt('comandante', 'c04')), z: IconosOpc_tam(),
-                     sd: sd, zc: zc, ec: ec, eb: numOpc('e_blip', 0, 100), cb: COLORES.indexOf(cb) >= 0 ? cb : '', ar: codigoAnillos() };
+                     sd: sd, zc: zc, ec: ec, eb: numOpc('e_blip', 0, 100), cb: COLORES.indexOf(cb) >= 0 ? cb : '', mt: COLORES.indexOf(cmt) >= 0 ? cmt : '', ar: codigoAnillos() };
         }
     };
     // Codigo de anillos (0 = sin cambios): lo publica iconos_valor.json para que live_game no sondee los ajustes.
@@ -71,13 +71,15 @@ IconosOpc.UMBRAL_SHADER = 150;   // z (%) a partir del cual el tamano lo da el s
 // Iconos de comandante (tambien los cosmeticos): la variante elegida los sustituye (carpetas comandantes, comandantes_104 y comandantes_208: <variante>.png).
 IconosOpc.COMANDANTES = ['commander', 'commander_beast_king', 'commander_kapowaz', 'commander_pumpkin', 'commander_unicorn', 'bot_support_commander', 'tutorial_titan_commander'];
 IconosOpc.OBJETOS_MAPA = ['metal_splat_02', 'energy_spot_01', 'control_point_01'];
+// Marcadores del planeta: siempre como en PA en todas las skins (solo el punto de metal puede cambiar de color, ajuste c_metal).
+IconosOpc.MARCADORES = ['metal_splat_02', 'metal_spot_preview', 'energy_spot_01', 'control_point_01'];
 IconosOpc.resolver = function (n, cfg, cats, bbox) {
     var info = (cats && cats[n]) || { c: 'otro', d: null };
     var sk = cfg.s || 'original';
     if (info.d && cfg.sd && cfg.sd[info.d]) { sk = cfg.sd[info.d]; }
     var tabla = (bbox && bbox[sk]) || {};
     var cubierto = Object.prototype.hasOwnProperty.call(tabla, n);
-    var skEf = (sk !== 'original' && cubierto) ? sk : 'original';
+    var skEf = (sk !== 'original' && cubierto && IconosOpc.MARCADORES.indexOf(n) < 0) ? sk : 'original';
     var z = (cfg.z || 100);
     if (cfg.zc && info.c in cfg.zc && cfg.zc[info.c] !== null && cfg.zc[info.c] !== undefined) { z = cfg.zc[info.c]; }
     var e = null;
@@ -90,7 +92,7 @@ IconosOpc.resolver = function (n, cfg, cats, bbox) {
     // Elementos del mapa (puntos de metal/energia, punto de control): el motor los dibuja sin leer el marcador y al tamano de la celda -> con calidad > 1 se encogen con CSS 1/q.
     var objeto = q > 1 && IconosOpc.OBJETOS_MAPA.indexOf(n) >= 0;
     var marca = !objeto && (z > IconosOpc.UMBRAL_SHADER || q > 1) ? Math.round(Math.min(z, 350) / 5) : 0;   // con calidad > 1 el shader fija siempre el tamano (el motor dibuja la celda 52*q px)
-    return { skin: skEf, q: q, cm: (cfg.cm && cfg.cm !== 'original' && IconosOpc.COMANDANTES.indexOf(n) >= 0) ? cfg.cm : '', blipColor: (info.c === 'blip' && cfg.cb) ? cfg.cb : '', escala: objeto ? (z > IconosOpc.UMBRAL_SHADER ? 1 : (zf > 1 ? Math.min(zf, 52 / d) : zf)) / q : (marca ? 1 : (zf > 1 ? Math.min(zf, 52 / d) : zf)), e: e, marca: marca };
+    return { skin: skEf, q: q, cm: (cfg.cm && cfg.cm !== 'original' && IconosOpc.COMANDANTES.indexOf(n) >= 0) ? cfg.cm : '', blipColor: (info.c === 'blip' && cfg.cb) ? cfg.cb : '', metalColor: (n === 'metal_splat_02' && cfg.mt) ? cfg.mt : '', escala: objeto ? (z > IconosOpc.UMBRAL_SHADER ? 1 : (zf > 1 ? Math.min(zf, 52 / d) : zf)) / q : (marca ? 1 : (zf > 1 ? Math.min(zf, 52 / d) : zf)), e: e, marca: marca };
 };
 
 // Puente hacia el atlas (otro origen, sin acceso a los ajustes): archivo en memoria que el atlas lee por coui://.

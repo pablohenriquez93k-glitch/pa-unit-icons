@@ -57,7 +57,10 @@
   "High (104 px)": "Alta (104 px)",
   "Very high (208 px)": "Muy alta (208 px)",
   "Commander icon": "Icono del comandante",
-  "Original (Enhanced)": "Original (Mejorado)"
+  "Original (Enhanced)": "Original (Mejorado)",
+  "PLANET MARKERS": "MARCADORES DEL PLANETA",
+  "Metal spot color": "Color del punto de metal",
+  "Icon quality": "Calidad de iconos"
  },
  "fr": {
   "ICONS": "ICÔNES",
@@ -113,7 +116,10 @@
   "High (104 px)": "Haute (104 px)",
   "Very high (208 px)": "Très haute (208 px)",
   "Commander icon": "Icône du commandant",
-  "Original (Enhanced)": "Original (amélioré)"
+  "Original (Enhanced)": "Original (amélioré)",
+  "PLANET MARKERS": "MARQUEURS DE LA PLANÈTE",
+  "Metal spot color": "Couleur des gisements de métal",
+  "Icon quality": "Qualité des icônes"
  },
  "de": {
   "ICONS": "SYMBOLE",
@@ -169,7 +175,10 @@
   "High (104 px)": "Hoch (104 px)",
   "Very high (208 px)": "Sehr hoch (208 px)",
   "Commander icon": "Kommandant-Symbol",
-  "Original (Enhanced)": "Original (verbessert)"
+  "Original (Enhanced)": "Original (verbessert)",
+  "PLANET MARKERS": "PLANETENMARKIERUNGEN",
+  "Metal spot color": "Farbe der Metallvorkommen",
+  "Icon quality": "Symbolqualität"
  },
  "it": {
   "ICONS": "ICONE",
@@ -225,7 +234,10 @@
   "High (104 px)": "Alta (104 px)",
   "Very high (208 px)": "Molto alta (208 px)",
   "Commander icon": "Icona del comandante",
-  "Original (Enhanced)": "Originale (migliorato)"
+  "Original (Enhanced)": "Originale (migliorato)",
+  "PLANET MARKERS": "INDICATORI DEL PIANETA",
+  "Metal spot color": "Colore dei giacimenti di metallo",
+  "Icon quality": "Qualità delle icone"
  },
  "pt": {
   "ICONS": "ÍCONES",
@@ -281,7 +293,10 @@
   "High (104 px)": "Alta (104 px)",
   "Very high (208 px)": "Muito alta (208 px)",
   "Commander icon": "Ícone do comandante",
-  "Original (Enhanced)": "Original (melhorado)"
+  "Original (Enhanced)": "Original (melhorado)",
+  "PLANET MARKERS": "MARCADORES DO PLANETA",
+  "Metal spot color": "Cor dos pontos de metal",
+  "Icon quality": "Qualidade dos ícones"
  },
  "ru": {
   "ICONS": "ЗНАЧКИ",
@@ -337,7 +352,10 @@
   "High (104 px)": "Высокое (104 px)",
   "Very high (208 px)": "Очень высокое (208 px)",
   "Commander icon": "Значок командира",
-  "Original (Enhanced)": "Оригинал (улучшенный)"
+  "Original (Enhanced)": "Оригинал (улучшенный)",
+  "PLANET MARKERS": "МЕТКИ ПЛАНЕТЫ",
+  "Metal spot color": "Цвет точек металла",
+  "Icon quality": "Качество значков"
  },
  "uk": {
   "ICONS": "ЗНАЧКИ",
@@ -393,7 +411,10 @@
   "High (104 px)": "Висока (104 px)",
   "Very high (208 px)": "Дуже висока (208 px)",
   "Commander icon": "Значок командира",
-  "Original (Enhanced)": "Оригінал (покращений)"
+  "Original (Enhanced)": "Оригінал (покращений)",
+  "PLANET MARKERS": "МІТКИ ПЛАНЕТИ",
+  "Metal spot color": "Колір точок металу",
+  "Icon quality": "Якість значків"
  },
  "pl": {
   "ICONS": "IKONY",
@@ -449,7 +470,10 @@
   "High (104 px)": "Wysoka (104 px)",
   "Very high (208 px)": "Bardzo wysoka (208 px)",
   "Commander icon": "Ikona dowódcy",
-  "Original (Enhanced)": "Oryginał (ulepszony)"
+  "Original (Enhanced)": "Oryginał (ulepszony)",
+  "PLANET MARKERS": "ZNACZNIKI PLANETY",
+  "Metal spot color": "Kolor złóż metalu",
+  "Icon quality": "Jakość ikon"
  },
  "cs": {
   "ICONS": "IKONY",
@@ -505,7 +529,10 @@
   "High (104 px)": "Vysoká (104 px)",
   "Very high (208 px)": "Velmi vysoká (208 px)",
   "Commander icon": "Ikona velitele",
-  "Original (Enhanced)": "Originál (vylepšený)"
+  "Original (Enhanced)": "Originál (vylepšený)",
+  "PLANET MARKERS": "ZNAČKY PLANETY",
+  "Metal spot color": "Barva ložisek kovu",
+  "Icon quality": "Kvalita ikon"
  },
  "da": {
   "ICONS": "IKONER",
@@ -561,7 +588,10 @@
   "High (104 px)": "Høj (104 px)",
   "Very high (208 px)": "Meget høj (208 px)",
   "Commander icon": "Kommandørikon",
-  "Original (Enhanced)": "Original (forbedret)"
+  "Original (Enhanced)": "Original (forbedret)",
+  "PLANET MARKERS": "PLANETMARKØRER",
+  "Metal spot color": "Farve på metalpunkter",
+  "Icon quality": "Ikonkvalitet"
  },
  "fi": {
   "ICONS": "KUVAKKEET",
@@ -617,7 +647,10 @@
   "High (104 px)": "Korkea (104 px)",
   "Very high (208 px)": "Erittäin korkea (208 px)",
   "Commander icon": "Komentajan kuvake",
-  "Original (Enhanced)": "Alkuperäinen (parannettu)"
+  "Original (Enhanced)": "Alkuperäinen (parannettu)",
+  "PLANET MARKERS": "PLANEETAN MERKIT",
+  "Metal spot color": "Metalliesiintymien väri",
+  "Icon quality": "Kuvakkeiden laatu"
  },
  "hu": {
   "ICONS": "IKONOK",
@@ -673,7 +706,10 @@
   "High (104 px)": "Magas (104 px)",
   "Very high (208 px)": "Nagyon magas (208 px)",
   "Commander icon": "Parancsnok ikonja",
-  "Original (Enhanced)": "Eredeti (javított)"
+  "Original (Enhanced)": "Eredeti (javított)",
+  "PLANET MARKERS": "BOLYGÓJELÖLŐK",
+  "Metal spot color": "Fémlelőhelyek színe",
+  "Icon quality": "Ikonminőség"
  },
  "nl": {
   "ICONS": "PICTOGRAMMEN",
@@ -729,7 +765,10 @@
   "High (104 px)": "Hoog (104 px)",
   "Very high (208 px)": "Zeer hoog (208 px)",
   "Commander icon": "Commandant-pictogram",
-  "Original (Enhanced)": "Origineel (verbeterd)"
+  "Original (Enhanced)": "Origineel (verbeterd)",
+  "PLANET MARKERS": "PLANEETMARKERINGEN",
+  "Metal spot color": "Kleur van metaalpunten",
+  "Icon quality": "Pictogramkwaliteit"
  },
  "no": {
   "ICONS": "IKONER",
@@ -785,7 +824,10 @@
   "High (104 px)": "Høy (104 px)",
   "Very high (208 px)": "Svært høy (208 px)",
   "Commander icon": "Kommandørikon",
-  "Original (Enhanced)": "Original (forbedret)"
+  "Original (Enhanced)": "Original (forbedret)",
+  "PLANET MARKERS": "PLANETMARKØRER",
+  "Metal spot color": "Farge på metallpunkter",
+  "Icon quality": "Ikonkvalitet"
  },
  "ro": {
   "ICONS": "PICTOGRAME",
@@ -841,7 +883,10 @@
   "High (104 px)": "Înaltă (104 px)",
   "Very high (208 px)": "Foarte înaltă (208 px)",
   "Commander icon": "Pictograma comandantului",
-  "Original (Enhanced)": "Original (îmbunătățit)"
+  "Original (Enhanced)": "Original (îmbunătățit)",
+  "PLANET MARKERS": "MARCAJE PE PLANETĂ",
+  "Metal spot color": "Culoarea punctelor de metal",
+  "Icon quality": "Calitatea pictogramelor"
  },
  "sv": {
   "ICONS": "IKONER",
@@ -897,7 +942,10 @@
   "High (104 px)": "Hög (104 px)",
   "Very high (208 px)": "Mycket hög (208 px)",
   "Commander icon": "Befälhavarikon",
-  "Original (Enhanced)": "Original (förbättrad)"
+  "Original (Enhanced)": "Original (förbättrad)",
+  "PLANET MARKERS": "PLANETMARKÖRER",
+  "Metal spot color": "Färg på metallpunkter",
+  "Icon quality": "Ikonkvalitet"
  },
  "tr": {
   "ICONS": "SİMGELER",
@@ -953,7 +1001,10 @@
   "High (104 px)": "Yüksek (104 px)",
   "Very high (208 px)": "Çok yüksek (208 px)",
   "Commander icon": "Komutan simgesi",
-  "Original (Enhanced)": "Orijinal (geliştirilmiş)"
+  "Original (Enhanced)": "Orijinal (geliştirilmiş)",
+  "PLANET MARKERS": "GEZEGEN İŞARETLERİ",
+  "Metal spot color": "Metal noktası rengi",
+  "Icon quality": "Simge kalitesi"
  },
  "ja": {
   "ICONS": "アイコン",
@@ -1009,7 +1060,10 @@
   "High (104 px)": "高 (104 px)",
   "Very high (208 px)": "最高 (208 px)",
   "Commander icon": "コマンダーのアイコン",
-  "Original (Enhanced)": "オリジナル（強化版）"
+  "Original (Enhanced)": "オリジナル（強化版）",
+  "PLANET MARKERS": "惑星マーカー",
+  "Metal spot color": "金属スポットの色",
+  "Icon quality": "アイコン品質"
  },
  "ko": {
   "ICONS": "아이콘",
@@ -1065,7 +1119,10 @@
   "High (104 px)": "높음 (104 px)",
   "Very high (208 px)": "매우 높음 (208 px)",
   "Commander icon": "사령관 아이콘",
-  "Original (Enhanced)": "오리지널 (개선판)"
+  "Original (Enhanced)": "오리지널 (개선판)",
+  "PLANET MARKERS": "행성 표시",
+  "Metal spot color": "금속 지점 색상",
+  "Icon quality": "아이콘 품질"
  },
  "ar": {
   "ICONS": "الأيقونات",
@@ -1121,7 +1178,10 @@
   "High (104 px)": "عالية (104 px)",
   "Very high (208 px)": "عالية جدًا (208 px)",
   "Commander icon": "أيقونة القائد",
-  "Original (Enhanced)": "الأصلي (محسّن)"
+  "Original (Enhanced)": "الأصلي (محسّن)",
+  "PLANET MARKERS": "علامات الكوكب",
+  "Metal spot color": "لون نقاط المعدن",
+  "Icon quality": "جودة الأيقونات"
  },
  "zh-CN": {
   "ICONS": "图标",
@@ -1177,7 +1237,10 @@
   "High (104 px)": "高 (104 px)",
   "Very high (208 px)": "超高 (208 px)",
   "Commander icon": "指挥官图标",
-  "Original (Enhanced)": "原版（增强）"
+  "Original (Enhanced)": "原版（增强）",
+  "PLANET MARKERS": "星球标记",
+  "Metal spot color": "金属点颜色",
+  "Icon quality": "图标质量"
  },
  "zh-TW": {
   "ICONS": "圖示",
@@ -1233,7 +1296,10 @@
   "High (104 px)": "高 (104 px)",
   "Very high (208 px)": "超高 (208 px)",
   "Commander icon": "指揮官圖示",
-  "Original (Enhanced)": "原版（增強）"
+  "Original (Enhanced)": "原版（增強）",
+  "PLANET MARKERS": "星球標記",
+  "Metal spot color": "金屬點顏色",
+  "Icon quality": "圖示品質"
  },
  "zh-HK": {
   "ICONS": "圖示",
@@ -1289,7 +1355,10 @@
   "High (104 px)": "高 (104 px)",
   "Very high (208 px)": "超高 (208 px)",
   "Commander icon": "指揮官圖示",
-  "Original (Enhanced)": "原版（增強）"
+  "Original (Enhanced)": "原版（增強）",
+  "PLANET MARKERS": "星球標記",
+  "Metal spot color": "金屬點顏色",
+  "Icon quality": "圖示品質"
  }
 };
     IconosOpc.TRAD = TRAD;

@@ -26,7 +26,7 @@
         local_only: true,
         settings: {
             skin: { title: L('Icon style'), type: 'select', options: skins, optionsText: skinTxt, default: 'original' },
-            calidad: { title: L('Icon quality (Outline / Bevel)'), type: 'select', options: calidades, optionsText: calidadTxt, default: '1' },
+            calidad: { title: L('Icon quality'), type: 'select', options: calidades, optionsText: calidadTxt, default: '1' },
             comandante: { title: L('Commander icon'), type: 'select', options: cmdOpc, optionsText: cmdTxt, default: 'c04' },
             tamano: { title: L('Strategic icon size'), type: 'select', options: tams, optionsText: tams.map(function (n) { return n + '%'; }), default: '100' },
             estrategico: { title: L('Strategic icon opacity'), type: 'select', options: niveles, optionsText: textos, default: '100' },
@@ -44,6 +44,7 @@
             e_orbital: { title: L('Opacity: orbital units'), type: 'select', options: nivelesGl, optionsText: textosGl, default: 'global' },
             e_blip: { title: L('Blip opacity'), type: 'select', options: nivelesGl, optionsText: textosGl, default: 'global' },
             c_blip: { title: L('Blip color'), type: 'select', options: colores, optionsText: coloresTxt, default: 'equipo' },
+            c_metal: { title: L('Metal spot color'), type: 'select', options: ['original'].concat(colores.slice(1)), optionsText: [L('Default')].concat(coloresTxt.slice(1)), default: 'original' },
             anillo_seleccion: { title: L('Selection ring style'), type: 'select', options: ['original', 'dom314'], optionsText: ['Default', 'Rainbow (dom314)'].map(L), default: 'original' },
             anillo_hover: { title: L('Hover ring color'), type: 'select', options: ['original'].concat(colores.slice(1)), optionsText: [L('Default')].concat(coloresTxt.slice(1)), default: 'original' },
             preajuste: { title: L('Preset'), type: 'select', options: presets, optionsText: presetsTxt, default: 'custom' }
@@ -57,15 +58,16 @@
     };
     function opt(k) { return '<div class="option" data-bind="template: { name: \'setting-template\', data: $root.settingsItemMap()[\'' + G + '.' + k + '\'] }"></div>'; }
     function grupo(titulo, claves, extra) {
-        return '<div class="form-group"><div class="sub-group-title" data-bind="text: loc(\'!LOC:' + titulo + '\')"></div><div class="sub-group top">' + claves.map(opt).join('') + (extra || '') + '</div></div>';
+        return '<div class="form-group" style="flex-shrink:0"><div class="sub-group-title" data-bind="text: loc(\'!LOC:' + titulo + '\')"></div><div class="sub-group top">' + claves.map(opt).join('') + (extra || '') + '</div></div>';
     }
     var html =
         '<div class="option-list iconos" style="max-height:100%;overflow-y:auto" data-bind="visible: ($root.settingGroups().indexOf(\'' + G + '\') === $root.activeSettingsGroupIndex())">' +
-        '<div class="option iconos-aviso" style="padding:6px 0;font-style:italic" data-bind="text: loc(\'!LOC:Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.\')"></div>' +
+        '<div class="option iconos-aviso" style="padding:6px 0;font-style:italic;flex-shrink:0" data-bind="text: loc(\'!LOC:Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.\')"></div>' +
         grupo('UNIT ICONS', ['skin', 'calidad', 'comandante', 'tamano', 'estrategico', 'ui'], '<div class="option"><div class="iconos-prev" style="padding:6px 0"></div></div>') +
         grupo('STYLE BY DOMAIN', ['sk_tierra', 'sk_naval', 'sk_aire', 'sk_orbital', 'sk_estructura']) +
         grupo('SIZE AND OPACITY BY CATEGORY', ['z_unidades', 'z_edificios', 'z_orbital', 'e_unidades', 'e_edificios', 'e_orbital']) +
         grupo('RADAR BLIPS', ['e_blip', 'c_blip']) +
+        grupo('PLANET MARKERS', ['c_metal']) +
         grupo('SELECTION AND HOVER RINGS', ['anillo_seleccion', 'anillo_hover'], '<div class="option" data-bind="text: loc(\'!LOC:Ring changes reload the game view.\')"></div>') +
         grupo('PRESETS AND RESET', ['preajuste'], '<div class="option"><button class="btn iconos-reset" data-bind="text: loc(\'!LOC:Reset to defaults\')"></button></div><div class="option" data-bind="text: loc(\'!LOC:Translations are automatic and may contain errors.\')"></div>') +
         '</div>';

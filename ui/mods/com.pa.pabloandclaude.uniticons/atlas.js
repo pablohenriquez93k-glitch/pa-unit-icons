@@ -22,14 +22,27 @@
             var r = IconosOpc.resolver(n, cfg, cats, bbox);
             var src = im.getAttribute('data-src0');
             if (r.blipColor) { src = BASE + 'blips/' + (r.skin === 'original_hd' ? 'original' : r.skin) + '/icon_si_blip_' + r.blipColor + '.png'; }
+            else if (r.metalColor) { src = BASE + 'metal/icon_si_metal_splat_02_' + r.metalColor + '.png'; }
             else if (r.cm) { src = BASE + 'comandantes' + (r.q > 1 ? '_' + (52 * r.q) : '') + '/' + r.cm + '.png'; }
             else if (r.skin !== 'original' && !(r.skin === 'original_hd' && r.q === 1)) { src = BASE + (r.q > 1 ? 'skins_' + (52 * r.q) : 'skins') + '/' + r.skin + '/icon_si_' + n + '.png'; }
-            if (im.getAttribute('src') !== src) { im.setAttribute('data-skin', r.blipColor ? 'blip' : r.cm ? 'cmd' : r.skin); im.setAttribute('src', src); }
+            if (im.getAttribute('src') !== src) { im.setAttribute('data-skin', r.blipColor ? 'blip' : r.metalColor ? 'metal' : r.cm ? 'cmd' : r.skin); im.setAttribute('src', src); }
             im.style.webkitTransform = r.escala === 1 ? '' : 'scale(' + r.escala + ')';
             // marcador de factor para particle_icon.vs: 1 pixel (0,0) de la celda, bajo la imagen
             var mc = r.marca ? 'linear-gradient(rgb(' + r.marca + ',' + (5 * r.q) + ',250),rgb(' + r.marca + ',' + (5 * r.q) + ',250)) no-repeat 0 0 / ' + r.q + 'px ' + r.q + 'px' : '';
             if (im.style.background !== mc) { im.style.background = mc; }
-            im.style.opacity = r.e === null ? '' : String(Math.sqrt(Math.max(0, Math.min(100, r.e)) / 100));   // sin valor propio: regla global
+            var op = Math.sqrt(Math.max(0, Math.min(100, r.e === null ? (cur.e === null ? 100 : cur.e) : r.e)) / 100);
+            if (r.marca && op < 1) {
+                // la opacidad CSS bajaria tambien el alfa del marcador y el shader lo descartaria (icono al tamano de la celda):
+                // se aplica con una mascara que deja opaco el marcador (q x q px)
+                im.style.opacity = '1';
+                im.style.webkitMaskImage = 'linear-gradient(#000,#000),linear-gradient(rgba(0,0,0,' + op + '),rgba(0,0,0,' + op + '))';
+                im.style.webkitMaskSize = r.q + 'px ' + r.q + 'px,100% 100%';
+                im.style.webkitMaskPosition = '0 0,0 0';
+                im.style.webkitMaskRepeat = 'no-repeat,no-repeat';
+            } else {
+                im.style.webkitMaskImage = '';
+                im.style.opacity = r.e === null ? '' : String(op);   // sin valor propio: regla global
+            }
         }
     }
     // Calidad: el tamano de celda del atlas (52 / 104 / 208 px). El original envia 52; con otra calidad se reenvia la lista con la celda nueva.
@@ -65,7 +78,7 @@
             if (txt === cur.txt && e === cur.e) { return; }
             cur.txt = txt;
             var z = Number(d.z); if (!isFinite(z) || z <= 0) { z = 100; }
-            cur.cfg = { s: typeof d.s === 'string' ? d.s : 'original', cm: typeof d.cm === 'string' ? d.cm : '', q: (Number(d.q) === 2 || Number(d.q) === 4) ? Number(d.q) : 1, z: z, sd: d.sd || {}, zc: d.zc || {}, ec: d.ec || {}, eb: (d.eb === undefined ? null : d.eb), cb: typeof d.cb === 'string' ? d.cb : '' };
+            cur.cfg = { s: typeof d.s === 'string' ? d.s : 'original', cm: typeof d.cm === 'string' ? d.cm : '', q: (Number(d.q) === 2 || Number(d.q) === 4) ? Number(d.q) : 1, z: z, sd: d.sd || {}, zc: d.zc || {}, ec: d.ec || {}, eb: (d.eb === undefined ? null : d.eb), cb: typeof d.cb === 'string' ? d.cb : '', mt: typeof d.mt === 'string' ? d.mt : '' };
             if (e !== cur.e) { cur.e = e; css(); }
             celda(cur.cfg.q);
             aplicarImgs();
