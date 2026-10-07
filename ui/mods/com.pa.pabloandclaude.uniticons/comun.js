@@ -28,7 +28,9 @@ var IconosOpc = (function () {
     var CATS = ['unidades', 'edificios', 'orbital'];
     var COLORES = ['rojo', 'amarillo', 'verde', 'cian', 'azul', 'magenta', 'blanco'];
     function calidadOk(v) { return v === '2' || v === '4' ? Number(v) : 1; }   // factor de resolucion: 1 = 52 px, 2 = 104 px, 4 = 208 px
-    function skinOk(v) { return v === '2_hueca' || v === '4_bisel' ? v : 'original'; }
+    var COMANDANTES = ['c04', 'c01', 'c02', 'c03', 'c05', 'c06', 'c07', 'c08', 'c09', 'c10', 'c11', 'c12', 'c13', 'c14', 'c15', 'c16', 'c17', 'c18', 'c19', 'c20', 'c21'];
+    function comandanteOk(v) { return v === 'original' || COMANDANTES.indexOf(v) >= 0 ? v : 'c04'; }   // icono de comandante: 'original' o una de las 21 variantes (por defecto c04)
+    function skinOk(v) { return v === '2_hueca' || v === '4_bisel' || v === 'original_hd' ? v : 'original'; }
     function numOpc(clave, min, max) {   // 'global' (o invalido) -> null
         var v = txt(clave, 'global');
         if (v === 'global') { return null; }
@@ -51,7 +53,7 @@ var IconosOpc = (function () {
             DOMINIOS.forEach(function (d) { var v = txt('sk_' + d, 'global'); sd[d] = v === 'global' ? null : skinOk(v); });
             CATS.forEach(function (c) { zc[c] = numOpc('z_' + c, 50, 350); ec[c] = numOpc('e_' + c, 0, 100); });
             var cb = txt('c_blip', 'equipo');
-            return { e: Math.round(pct('estrategico') * 100), u: Math.round(pct('ui') * 100), s: skinOk(txt('skin', 'original')), q: calidadOk(txt('calidad', '1')), z: IconosOpc_tam(),
+            return { e: Math.round(pct('estrategico') * 100), u: Math.round(pct('ui') * 100), s: skinOk(txt('skin', 'original')), q: calidadOk(txt('calidad', '1')), cm: comandanteOk(txt('comandante', 'c04')), z: IconosOpc_tam(),
                      sd: sd, zc: zc, ec: ec, eb: numOpc('e_blip', 0, 100), cb: COLORES.indexOf(cb) >= 0 ? cb : '', ar: codigoAnillos() };
         }
     };
@@ -66,6 +68,8 @@ var IconosOpc = (function () {
 // Resolucion por icono (pura, probada en VM): que skin/PNG, tamano y opacidad le tocan a cada nombre segun cfg + categorias + bbox.
 // Con la cfg por defecto (todo null) devuelve lo mismo que el atlas anterior a ico-30.
 IconosOpc.UMBRAL_SHADER = 150;   // z (%) a partir del cual el tamano lo da el shader (marcador R = z/5, G = 5, B = 250 en el pixel 0,0 de la celda)
+// Iconos de comandante (tambien los cosmeticos): la variante elegida los sustituye (carpeta comandantes[_104|_208]/<variante>.png).
+IconosOpc.COMANDANTES = ['commander', 'commander_beast_king', 'commander_kapowaz', 'commander_pumpkin', 'commander_unicorn', 'bot_support_commander', 'tutorial_titan_commander'];
 IconosOpc.OBJETOS_MAPA = ['metal_splat_02', 'energy_spot_01', 'control_point_01'];
 IconosOpc.resolver = function (n, cfg, cats, bbox) {
     var info = (cats && cats[n]) || { c: 'otro', d: null };
@@ -86,7 +90,7 @@ IconosOpc.resolver = function (n, cfg, cats, bbox) {
     // Elementos del mapa (puntos de metal/energia, punto de control): el motor los dibuja sin leer el marcador y al tamano de la celda -> con calidad > 1 se encogen con CSS 1/q.
     var objeto = q > 1 && IconosOpc.OBJETOS_MAPA.indexOf(n) >= 0;
     var marca = !objeto && (z > IconosOpc.UMBRAL_SHADER || q > 1) ? Math.round(Math.min(z, 350) / 5) : 0;   // con calidad > 1 el shader fija siempre el tamano (el motor dibuja la celda 52*q px)
-    return { skin: skEf, q: q, blipColor: (info.c === 'blip' && cfg.cb) ? cfg.cb : '', escala: objeto ? (z > IconosOpc.UMBRAL_SHADER ? 1 : (zf > 1 ? Math.min(zf, 52 / d) : zf)) / q : (marca ? 1 : (zf > 1 ? Math.min(zf, 52 / d) : zf)), e: e, marca: marca };
+    return { skin: skEf, q: q, cm: (cfg.cm && cfg.cm !== 'original' && IconosOpc.COMANDANTES.indexOf(n) >= 0) ? cfg.cm : '', blipColor: (info.c === 'blip' && cfg.cb) ? cfg.cb : '', escala: objeto ? (z > IconosOpc.UMBRAL_SHADER ? 1 : (zf > 1 ? Math.min(zf, 52 / d) : zf)) / q : (marca ? 1 : (zf > 1 ? Math.min(zf, 52 / d) : zf)), e: e, marca: marca };
 };
 
 // Puente hacia el atlas (otro origen, sin acceso a los ajustes): archivo en memoria que el atlas lee por coui://.

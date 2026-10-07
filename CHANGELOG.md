@@ -1,5 +1,12 @@
 # Changelog — Unit Icons
 
+## 1.0.3 (2026-10-07)
+
+- New icon style **Original (Enhanced)**: the game's own icons redrawn as clean vector art (131 icons) for the High (104 px) and Very high (208 px) icon quality, with team color as in the game. At Standard quality it uses the game's 52 px icons, so the improvement shows at high icon quality and large UI scale. Asteroid, avatar and map-object icons stay as in the game.
+- Outline and Bevel icons redrawn from vector sources: cleaner shapes at every quality, same size as the game's icons.
+- New **Commander icon** setting (ICONS tab): the original icon or one of 21 new commander designs (default: chevron badge). It also replaces the cosmetic commanders' icons, works with every style and icon quality, and keeps the team color. Preview next to the style preview.
+- 22 settings; the new title is translated into the same 27 locales (design names in English).
+
 ## 1.0.2 (2026-10-06)
 
 - New **Icon quality** setting (ICONS tab): Standard (52 px, default, same as 1.0.1), High (104 px) or Very high (208 px). It raises the resolution of the Outline and Bevel icons, which makes them sharper at large sizes (above 200 %); the Original style keeps the game's own 52 px icons. Only the selected quality is loaded. On-screen size is unchanged: the overridden `particle_icon.vs` compensates for the larger atlas cell.
@@ -13,4 +20,4 @@
 ## 1.0.0 (2026-10-05) — first release
 
 - Strategic unit icons (original + 5 skins), per-domain style, size/opacity by category, radar blip color, selection/hover ring options and presets (20 settings, ICONS tab). Overrides 4 game shaders; ring options depend on the game's diameter table. Translations (27 locales) are automatic and may contain errors.
-- The "Rainbow (dom314)" selection-ring option adapts code from *Rainbow Circle Ring* by **dom314**, who published no license (Pablo contacted the author on Discord; no reply); used with attribution as if MIT by the mod authors' decision, and removed on request.
+- The "Rainbow (dom314)" selection-ring option adapts code from *Rainbow Circle Ring* by **dom314**, who published no license (the mod authors contacted dom314 on Discord; no reply); used with attribution as if MIT by the mod authors' decision, and removed on request.

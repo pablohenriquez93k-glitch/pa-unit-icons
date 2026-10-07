@@ -55,7 +55,9 @@
   "Icon quality (Outline / Bevel)": "Calidad de iconos (Contorno / Bisel)",
   "Standard (52 px)": "Estándar (52 px)",
   "High (104 px)": "Alta (104 px)",
-  "Very high (208 px)": "Muy alta (208 px)"
+  "Very high (208 px)": "Muy alta (208 px)",
+  "Commander icon": "Icono del comandante",
+  "Original (Enhanced)": "Original (Mejorado)"
  },
  "fr": {
   "ICONS": "ICÔNES",
@@ -109,7 +111,9 @@
   "Icon quality (Outline / Bevel)": "Qualité des icônes (Contour / Biseau)",
   "Standard (52 px)": "Standard (52 px)",
   "High (104 px)": "Haute (104 px)",
-  "Very high (208 px)": "Très haute (208 px)"
+  "Very high (208 px)": "Très haute (208 px)",
+  "Commander icon": "Icône du commandant",
+  "Original (Enhanced)": "Original (amélioré)"
  },
  "de": {
   "ICONS": "SYMBOLE",
@@ -163,7 +167,9 @@
   "Icon quality (Outline / Bevel)": "Symbolqualität (Umriss / Abschrägung)",
   "Standard (52 px)": "Standard (52 px)",
   "High (104 px)": "Hoch (104 px)",
-  "Very high (208 px)": "Sehr hoch (208 px)"
+  "Very high (208 px)": "Sehr hoch (208 px)",
+  "Commander icon": "Kommandant-Symbol",
+  "Original (Enhanced)": "Original (verbessert)"
  },
  "it": {
   "ICONS": "ICONE",
@@ -217,7 +223,9 @@
   "Icon quality (Outline / Bevel)": "Qualità delle icone (Contorno / Smussato)",
   "Standard (52 px)": "Standard (52 px)",
   "High (104 px)": "Alta (104 px)",
-  "Very high (208 px)": "Molto alta (208 px)"
+  "Very high (208 px)": "Molto alta (208 px)",
+  "Commander icon": "Icona del comandante",
+  "Original (Enhanced)": "Originale (migliorato)"
  },
  "pt": {
   "ICONS": "ÍCONES",
@@ -271,7 +279,9 @@
   "Icon quality (Outline / Bevel)": "Qualidade dos ícones (Contorno / Chanfro)",
   "Standard (52 px)": "Padrão (52 px)",
   "High (104 px)": "Alta (104 px)",
-  "Very high (208 px)": "Muito alta (208 px)"
+  "Very high (208 px)": "Muito alta (208 px)",
+  "Commander icon": "Ícone do comandante",
+  "Original (Enhanced)": "Original (melhorado)"
  },
  "ru": {
   "ICONS": "ЗНАЧКИ",
@@ -325,7 +335,9 @@
   "Icon quality (Outline / Bevel)": "Качество значков (Контур / Скос)",
   "Standard (52 px)": "Стандартное (52 px)",
   "High (104 px)": "Высокое (104 px)",
-  "Very high (208 px)": "Очень высокое (208 px)"
+  "Very high (208 px)": "Очень высокое (208 px)",
+  "Commander icon": "Значок командира",
+  "Original (Enhanced)": "Оригинал (улучшенный)"
  },
  "uk": {
   "ICONS": "ЗНАЧКИ",
@@ -379,7 +391,9 @@
   "Icon quality (Outline / Bevel)": "Якість значків (Контур / Скіс)",
   "Standard (52 px)": "Стандартна (52 px)",
   "High (104 px)": "Висока (104 px)",
-  "Very high (208 px)": "Дуже висока (208 px)"
+  "Very high (208 px)": "Дуже висока (208 px)",
+  "Commander icon": "Значок командира",
+  "Original (Enhanced)": "Оригінал (покращений)"
  },
  "pl": {
   "ICONS": "IKONY",
@@ -433,7 +447,9 @@
   "Icon quality (Outline / Bevel)": "Jakość ikon (Kontur / Skos)",
   "Standard (52 px)": "Standardowa (52 px)",
   "High (104 px)": "Wysoka (104 px)",
-  "Very high (208 px)": "Bardzo wysoka (208 px)"
+  "Very high (208 px)": "Bardzo wysoka (208 px)",
+  "Commander icon": "Ikona dowódcy",
+  "Original (Enhanced)": "Oryginał (ulepszony)"
  },
  "cs": {
   "ICONS": "IKONY",
@@ -487,7 +503,9 @@
   "Icon quality (Outline / Bevel)": "Kvalita ikon (Obrys / Zkosení)",
   "Standard (52 px)": "Standardní (52 px)",
   "High (104 px)": "Vysoká (104 px)",
-  "Very high (208 px)": "Velmi vysoká (208 px)"
+  "Very high (208 px)": "Velmi vysoká (208 px)",
+  "Commander icon": "Ikona velitele",
+  "Original (Enhanced)": "Originál (vylepšený)"
  },
  "da": {
   "ICONS": "IKONER",
@@ -541,7 +559,9 @@
   "Icon quality (Outline / Bevel)": "Ikonkvalitet (Omrids / Affasning)",
   "Standard (52 px)": "Standard (52 px)",
   "High (104 px)": "Høj (104 px)",
-  "Very high (208 px)": "Meget høj (208 px)"
+  "Very high (208 px)": "Meget høj (208 px)",
+  "Commander icon": "Kommandørikon",
+  "Original (Enhanced)": "Original (forbedret)"
  },
  "fi": {
   "ICONS": "KUVAKKEET",
@@ -595,7 +615,9 @@
   "Icon quality (Outline / Bevel)": "Kuvakkeiden laatu (Ääriviiva / Viiste)",
   "Standard (52 px)": "Vakio (52 px)",
   "High (104 px)": "Korkea (104 px)",
-  "Very high (208 px)": "Erittäin korkea (208 px)"
+  "Very high (208 px)": "Erittäin korkea (208 px)",
+  "Commander icon": "Komentajan kuvake",
+  "Original (Enhanced)": "Alkuperäinen (parannettu)"
  },
  "hu": {
   "ICONS": "IKONOK",
@@ -649,7 +671,9 @@
   "Icon quality (Outline / Bevel)": "Ikonminőség (Körvonal / Letörés)",
   "Standard (52 px)": "Normál (52 px)",
   "High (104 px)": "Magas (104 px)",
-  "Very high (208 px)": "Nagyon magas (208 px)"
+  "Very high (208 px)": "Nagyon magas (208 px)",
+  "Commander icon": "Parancsnok ikonja",
+  "Original (Enhanced)": "Eredeti (javított)"
  },
  "nl": {
   "ICONS": "PICTOGRAMMEN",
@@ -703,7 +727,9 @@
   "Icon quality (Outline / Bevel)": "Pictogramkwaliteit (Omlijning / Afschuining)",
   "Standard (52 px)": "Standaard (52 px)",
   "High (104 px)": "Hoog (104 px)",
-  "Very high (208 px)": "Zeer hoog (208 px)"
+  "Very high (208 px)": "Zeer hoog (208 px)",
+  "Commander icon": "Commandant-pictogram",
+  "Original (Enhanced)": "Origineel (verbeterd)"
  },
  "no": {
   "ICONS": "IKONER",
@@ -757,7 +783,9 @@
   "Icon quality (Outline / Bevel)": "Ikonkvalitet (Omriss / Skråkant)",
   "Standard (52 px)": "Standard (52 px)",
   "High (104 px)": "Høy (104 px)",
-  "Very high (208 px)": "Svært høy (208 px)"
+  "Very high (208 px)": "Svært høy (208 px)",
+  "Commander icon": "Kommandørikon",
+  "Original (Enhanced)": "Original (forbedret)"
  },
  "ro": {
   "ICONS": "PICTOGRAME",
@@ -811,7 +839,9 @@
   "Icon quality (Outline / Bevel)": "Calitatea pictogramelor (Contur / Teșit)",
   "Standard (52 px)": "Standard (52 px)",
   "High (104 px)": "Înaltă (104 px)",
-  "Very high (208 px)": "Foarte înaltă (208 px)"
+  "Very high (208 px)": "Foarte înaltă (208 px)",
+  "Commander icon": "Pictograma comandantului",
+  "Original (Enhanced)": "Original (îmbunătățit)"
  },
  "sv": {
   "ICONS": "IKONER",
@@ -865,7 +895,9 @@
   "Icon quality (Outline / Bevel)": "Ikonkvalitet (Kontur / Fasning)",
   "Standard (52 px)": "Standard (52 px)",
   "High (104 px)": "Hög (104 px)",
-  "Very high (208 px)": "Mycket hög (208 px)"
+  "Very high (208 px)": "Mycket hög (208 px)",
+  "Commander icon": "Befälhavarikon",
+  "Original (Enhanced)": "Original (förbättrad)"
  },
  "tr": {
   "ICONS": "SİMGELER",
@@ -919,7 +951,9 @@
   "Icon quality (Outline / Bevel)": "Simge kalitesi (Taslak / Pah)",
   "Standard (52 px)": "Standart (52 px)",
   "High (104 px)": "Yüksek (104 px)",
-  "Very high (208 px)": "Çok yüksek (208 px)"
+  "Very high (208 px)": "Çok yüksek (208 px)",
+  "Commander icon": "Komutan simgesi",
+  "Original (Enhanced)": "Orijinal (geliştirilmiş)"
  },
  "ja": {
   "ICONS": "アイコン",
@@ -973,7 +1007,9 @@
   "Icon quality (Outline / Bevel)": "アイコンの品質（アウトライン／ベベル）",
   "Standard (52 px)": "標準 (52 px)",
   "High (104 px)": "高 (104 px)",
-  "Very high (208 px)": "最高 (208 px)"
+  "Very high (208 px)": "最高 (208 px)",
+  "Commander icon": "コマンダーのアイコン",
+  "Original (Enhanced)": "オリジナル（強化版）"
  },
  "ko": {
   "ICONS": "아이콘",
@@ -1027,7 +1063,9 @@
   "Icon quality (Outline / Bevel)": "아이콘 품질 (윤곽선 / 베벨)",
   "Standard (52 px)": "표준 (52 px)",
   "High (104 px)": "높음 (104 px)",
-  "Very high (208 px)": "매우 높음 (208 px)"
+  "Very high (208 px)": "매우 높음 (208 px)",
+  "Commander icon": "사령관 아이콘",
+  "Original (Enhanced)": "오리지널 (개선판)"
  },
  "ar": {
   "ICONS": "الأيقونات",
@@ -1081,7 +1119,9 @@
   "Icon quality (Outline / Bevel)": "جودة الأيقونات (مخطط / مشطوف)",
   "Standard (52 px)": "قياسية (52 px)",
   "High (104 px)": "عالية (104 px)",
-  "Very high (208 px)": "عالية جدًا (208 px)"
+  "Very high (208 px)": "عالية جدًا (208 px)",
+  "Commander icon": "أيقونة القائد",
+  "Original (Enhanced)": "الأصلي (محسّن)"
  },
  "zh-CN": {
   "ICONS": "图标",
@@ -1135,7 +1175,9 @@
   "Icon quality (Outline / Bevel)": "图标质量（轮廓 / 斜面）",
   "Standard (52 px)": "标准 (52 px)",
   "High (104 px)": "高 (104 px)",
-  "Very high (208 px)": "超高 (208 px)"
+  "Very high (208 px)": "超高 (208 px)",
+  "Commander icon": "指挥官图标",
+  "Original (Enhanced)": "原版（增强）"
  },
  "zh-TW": {
   "ICONS": "圖示",
@@ -1189,7 +1231,9 @@
   "Icon quality (Outline / Bevel)": "圖示品質（輪廓 / 斜角）",
   "Standard (52 px)": "標準 (52 px)",
   "High (104 px)": "高 (104 px)",
-  "Very high (208 px)": "超高 (208 px)"
+  "Very high (208 px)": "超高 (208 px)",
+  "Commander icon": "指揮官圖示",
+  "Original (Enhanced)": "原版（增強）"
  },
  "zh-HK": {
   "ICONS": "圖示",
@@ -1243,7 +1287,9 @@
   "Icon quality (Outline / Bevel)": "圖示品質（輪廓 / 斜角）",
   "Standard (52 px)": "標準 (52 px)",
   "High (104 px)": "高 (104 px)",
-  "Very high (208 px)": "超高 (208 px)"
+  "Very high (208 px)": "超高 (208 px)",
+  "Commander icon": "指揮官圖示",
+  "Original (Enhanced)": "原版（增強）"
  }
 };
     IconosOpc.TRAD = TRAD;

@@ -5,10 +5,13 @@
     var L = function (t) { return '!LOC:' + t; };
     var niveles = ['100', '90', '80', '70', '60', '50', '40', '30', '20', '10'];
     var textos = niveles.map(function (n) { return n + '%'; });
-    var skins = ['original', '2_hueca', '4_bisel'];
-    var skinTxt = ['Original (game icons)', 'Outline', 'Bevel'].map(L);
+    var skins = ['original', 'original_hd', '2_hueca', '4_bisel'];
+    var skinTxt = ['Original (game icons)', 'Original (Enhanced)', 'Outline', 'Bevel'].map(L);
     var calidades = ['1', '2', '4'];
     var calidadTxt = ['Standard (52 px)', 'High (104 px)', 'Very high (208 px)'].map(L);
+    var cmd = [['c04', 'Chevron badge (default)'], ['c01', 'Crested helm'], ['c02', 'Crown'], ['c03', 'Laurel medallion'], ['c05', 'Command star'], ['c06', 'Watchful eye'], ['c07', 'Crosshair'], ['c08', 'Command dish'], ['c09', 'Baton'], ['c10', 'Winged star'], ['c11', 'Landing pod'], ['c12', 'Robot head'], ['c13', 'Command flag'], ['c14', 'Energy core'], ['c15', 'Cross of honor'], ['c16', 'Lightning medallion'], ['c17', 'Command dome'], ['c18', 'Sword'], ['c19', 'Headset'], ['c20', 'Cyclops helm'], ['c21', 'Star shield']];
+    var cmdOpc = ['original'].concat(cmd.map(function (c) { return c[0]; }));
+    var cmdTxt = [L('Original (game icons)')].concat(cmd.map(function (c) { return c[1]; }));
     var tams = ['75', '90', '100', '110', '125', '150', '175', '200', '250', '300', '350'];
     var gl = L('Same as general');
     var textosGl = [gl].concat(textos), nivelesGl = ['global'].concat(niveles);
@@ -24,6 +27,7 @@
         settings: {
             skin: { title: L('Icon style'), type: 'select', options: skins, optionsText: skinTxt, default: 'original' },
             calidad: { title: L('Icon quality (Outline / Bevel)'), type: 'select', options: calidades, optionsText: calidadTxt, default: '1' },
+            comandante: { title: L('Commander icon'), type: 'select', options: cmdOpc, optionsText: cmdTxt, default: 'c04' },
             tamano: { title: L('Strategic icon size'), type: 'select', options: tams, optionsText: tams.map(function (n) { return n + '%'; }), default: '100' },
             estrategico: { title: L('Strategic icon opacity'), type: 'select', options: niveles, optionsText: textos, default: '100' },
             ui: { title: L('Unit portrait opacity (selection / build bar)'), type: 'select', options: niveles, optionsText: textos, default: '100' },
@@ -58,7 +62,7 @@
     var html =
         '<div class="option-list iconos" style="max-height:100%;overflow-y:auto" data-bind="visible: ($root.settingGroups().indexOf(\'' + G + '\') === $root.activeSettingsGroupIndex())">' +
         '<div class="option iconos-aviso" style="padding:6px 0;font-style:italic" data-bind="text: loc(\'!LOC:Want an icon added to the mod? Let us know in the Planetary Annihilation Discord, channel #making-mods.\')"></div>' +
-        grupo('UNIT ICONS', ['skin', 'calidad', 'tamano', 'estrategico', 'ui'], '<div class="option"><div class="iconos-prev" style="padding:6px 0"></div></div>') +
+        grupo('UNIT ICONS', ['skin', 'calidad', 'comandante', 'tamano', 'estrategico', 'ui'], '<div class="option"><div class="iconos-prev" style="padding:6px 0"></div></div>') +
         grupo('STYLE BY DOMAIN', ['sk_tierra', 'sk_naval', 'sk_aire', 'sk_orbital', 'sk_estructura']) +
         grupo('SIZE AND OPACITY BY CATEGORY', ['z_unidades', 'z_edificios', 'z_orbital', 'e_unidades', 'e_edificios', 'e_orbital']) +
         grupo('RADAR BLIPS', ['e_blip', 'c_blip']) +
@@ -83,11 +87,11 @@
     function val(map, k) { try { return String(map[G + '.' + k].value()); } catch (e) { return ''; } }
     function vistaPrevia(map) {
         var box = $('.iconos-prev'); if (!box.length) { return; }
-        var sg = val(map, 'skin') || 'original';
+        var sg = val(map, 'skin') || 'original', cm = val(map, 'comandante') || 'c04';
         box.html(DOMS.map(function (d) {
             var sk = val(map, 'sk_' + d); if (!sk || sk === 'global') { sk = sg; }
             return '<img src="' + BASE + 'previews/' + sk + '/' + d + '.png" style="width:52px;height:52px;margin-right:6px;image-rendering:pixelated"/>';
-        }).join(''));
+        }).join('') + (cm !== 'original' ? '<img src="' + BASE + 'previews/comandantes/' + cm + '.png" style="width:52px;height:52px;margin-right:6px"/>' : ''));
     }
     function engancharse() {
         var map = window.model && model.settingsItemMap && model.settingsItemMap();
