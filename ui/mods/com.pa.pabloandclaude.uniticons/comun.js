@@ -68,7 +68,7 @@ var IconosOpc = (function () {
 // Resolucion por icono (pura, probada en VM): que skin/PNG, tamano y opacidad le tocan a cada nombre segun cfg + categorias + bbox.
 // Con la cfg por defecto (todo null) devuelve lo mismo que el atlas anterior a ico-30.
 IconosOpc.UMBRAL_SHADER = 150;   // z (%) a partir del cual el tamano lo da el shader (marcador R = z/5, G = 5, B = 250 en el pixel 0,0 de la celda)
-// Iconos de comandante (tambien los cosmeticos): la variante elegida los sustituye (carpeta comandantes[_104|_208]/<variante>.png).
+// Iconos de comandante (tambien los cosmeticos): la variante elegida los sustituye (carpetas comandantes, comandantes_104 y comandantes_208: <variante>.png).
 IconosOpc.COMANDANTES = ['commander', 'commander_beast_king', 'commander_kapowaz', 'commander_pumpkin', 'commander_unicorn', 'bot_support_commander', 'tutorial_titan_commander'];
 IconosOpc.OBJETOS_MAPA = ['metal_splat_02', 'energy_spot_01', 'control_point_01'];
 IconosOpc.resolver = function (n, cfg, cats, bbox) {
