@@ -4,10 +4,10 @@
   "display_name": "Unit Icons",
   "description": "Strategic unit icons: original, Original (Enhanced) vector redraw for high icon quality and 2 custom styles (Outline, Bevel), style by domain, size (up to 350%), icon quality (up to 208 px), 21 commander icon designs and opacity by category, radar blip color, metal spot color, selection/hover ring options and presets (23 settings in the ICONS tab). Cosmetic only. Overrides 5 game shaders (particle_icon.fs, particle_icon.vs, unit_ring_selection.fs, unit_ring_hover.fs, particle_direct_ring_selection.vs) and relies on the game's ring-diameter table: re-check after game patches. Translations are automatic and may contain errors. The rainbow selection-ring option adapts code from Rainbow Circle Ring by dom314 (no license published; used with attribution, will be removed on request).",
   "author": "Pablo & Claude",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "build": "124683",
   "forum": "https://github.com/pablohenriquez93k-glitch/pa-unit-icons/discussions/1",
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "signature": " ",
   "priority": 150,
   "category": [

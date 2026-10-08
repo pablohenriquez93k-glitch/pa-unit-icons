@@ -1,5 +1,14 @@
 # Changelog — Unit Icons
 
+## 1.0.5 (2026-10-08)
+
+- Fix: with Icon quality Medium or High, radar blips were drawn huge and with a black dot. They now keep their normal size at every quality, including Low with size above 150 %.
+- Fix: a reload mark from Weapon FX with a future timestamp (clock moved back) no longer delays ring changes.
+- Less background polling: the icon atlas reads the settings every 2 s (was 1 s) and the selection/build bar portraits every 3 s (was 1 s).
+- Internal cleanup (duplicate size helper removed). No visible change.
+- Works together with Weapon FX: both mods now coordinate in game when they update the same unit files (shared check and a single scene reload), so ring options and weapon effects no longer risk overwriting each other. In a match, ring changes now apply as soon as the settings menu closes.
+- With a server mod that changes the selection ring size of a unit, the ring options stay off for that match (as before) and the server mod's values are kept.
+
 ## 1.0.4 (2026-10-07)
 
 - Fixed: with High or Very high icon quality and a strategic icon opacity below 100 %, icons were drawn 2× or 4× too large. Opacity no longer affects the size marker, so icons keep the game's size at every quality, size and opacity. This also fixes sizes above 150 % being ignored when opacity was below 100 %.

@@ -16,6 +16,6 @@
         $.ajax({ url: 'coui://' + IconosOpc.RUTA_MEM, cache: false, dataType: 'json' }).done(function (d) {
             if (d) { aplicar(Number(d.u)); }
         });
-    }, 1000);
+    }, 3000);   // 3 s: la opacidad de retratos no necesita mas frecuencia
     try { if (window.model && model.showSettings) { model.showSettings.subscribe(function (v) { if (!v) { api.settings.loadLocalData(); aplicar(); } }); } } catch (e) {}
 })();

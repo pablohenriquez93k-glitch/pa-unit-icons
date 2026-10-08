@@ -94,5 +94,5 @@
     if (window.model && model.strategicIcons && model.strategicIcons.subscribe) {
         model.strategicIcons.subscribe(function () { setTimeout(aplicarImgs, 0); });
     }
-    setInterval(leer, 1000);
+    setInterval(leer, 2000);   // 2 s: el cambio de ajustes se ve con poco retraso sin sondear de mas (revision 2026-10-08)
 })();
